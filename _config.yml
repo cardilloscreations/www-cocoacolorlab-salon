@@ -107,25 +107,25 @@ portfolio:
   # Portfolio Item - Salon
   - title: <span title="CocoaColorLab.Salon">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.S<span class="thin">alon</span></span>
     categories: [Lisa]
-    image: colorlab-salon-portfolio-image.png
+    image: colorlab-salon-portfolio-image.webp
     info: Lisa's hair salon services (this site)
     url: "https://cocoacolorlab.salon"
   # Portfolio Item - Com
   - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.C<span class="thin">om</span></span>
     categories: [Lisa,Ray]
-    image: colorlab-com-portfolio-image.png
+    image: colorlab-com-portfolio-image.webp
     info: Main company website
     url: "https://cocoacolorlab.com"
   # Portfolio Item - Ink
   - title: <span title="CocoaColorLab.Ink">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.I<span class="thin">nk</span></span>
     categories: [Ray]
-    image: colorlab-ink-portfolio-image.png
+    image: colorlab-ink-portfolio-image.webp
     info: Ray's tattoo services
     url: "https://cocoacolorlab.ink"
   # Portfolio Item - Art
   - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.A<span class="thin">rt</span></span>
     categories: [Ray]
-    image: colorlab-art-portfolio-image.png
+    image: colorlab-art-portfolio-image.webp
     info: Ray's art portfolio
     url: "https://cocoacolorlab.art"
 
