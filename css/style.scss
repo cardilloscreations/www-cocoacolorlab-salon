@@ -4,6 +4,7 @@
 ---
 
 /**
+ *  Heavily modified but the original template was:
  *
  *  Theme Name: Sera - OnePage Multi-Purpose Theme
  *  Theme URI: https://github.com/ohkimur/
@@ -22,60 +23,6 @@
 
  @charset "UTF-8";
 
- /**
-  * -----------------------------------------------------------------------------
-  *
-  *  [ Table of contents ]
-  *
-  *  1. Modules
-  *    1.1 Reset Css
-  *    1.2 Configuration
-  *    1.3 Color Skin
-  *        1.3.1 Light Theme
-  *        1.3.2 Dark Theme
-  *    1.4 Class Tools
-  *    1.5 Bootstrap Grid System
-  *    1.6 Responsive Embed
-  *        1.6.1 16:6 Video Aspect Ratio
-  *        1.6.2 4:3 Video Aspect Ratio
-  *        1.6.3 Standard Audio
-  *    1.7 Animations
-  *    1.8 Owl Carousel
-  *    1.9 Font 7 Stroke Icons
-  *  2. Components
-  *    2.1 Forms
-  *        2.1.1 Inputs
-  *        2.1.2 Textarea
-  *        2.1.3 Buttons
-  *        2.1.4 Form Group
-  *    2.2 Social Icons
-  *    2.3 Tags Box
-  *    2.4 Buttons
-  *  3. Layout
-  *    3.1 Global
-  *    3.4 Sections
-  *        3.4.1 Header
-  *            3.4.1.1 Header Responsive
-  *            3.4.1.2 Navigation Menu
-  *            3.4.1.3 Mobile Navigation
-  *            3.4.1.4 Buttons CTA (Call To Actions)
-  *         3.4.2 Offer Banner
-  *         3.4.3 About
-  *         3.4.4 Features
-  *         3.4.5 Portfolio
-  *             3.4.5.1 Portfolio Menu
-  *             3.4.5.2 Portfolio Grid
-  *         3.4.6 Parallax Features
-  *         3.4.7 Testimonials
-  *         3.4.8 Blog
-  *         3.4.9 Team
-  *         3.4.10 Prices
-  *         3.4.11 Contact
-  *         3.4.12 Footer
-  *    3.5 Sidebar
-  * -----------------------------------------------------------------------------
-  **/
-
  // Modules
  @import "modules/_reset",
          "modules/_config",
@@ -84,8 +31,7 @@
          "modules/_bootstrap-grid",
          "modules/_responsive-embed",
          "modules/_animations",
-         "modules/_owl-carousel",
-         "modules/_font-7-stroke";
+         "modules/_owl-carousel";
 
  // Components
  @import "components/_forms",
@@ -102,3 +48,5 @@
          "layout/_about",
          "layout/_portfolio",
          "layout/_footer";
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");

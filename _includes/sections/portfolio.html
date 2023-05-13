@@ -49,11 +49,11 @@
           {% capture item_title_text %}{{ item.title | strip_html | strip }}{% endcapture %}
           <div class="links">
             <ul>
-              <li><a href="{{ item.url }}" aria-label="Link to {{ item_title_text }}" class="item-link"><i class="pe-7s-link"></i></a></li>
+              <li><a href="{{ item.url }}" aria-label="Link to {{ item_title_text }}" class="item-link"><i class="bi bi-link-45deg"></i></a></li>
               {% if item.ext-url %}
-              <li><a href="{{ item.ext-url }}" aria-label="Link to {{ item.ext-url }}" class="item-ext"><i class="{{ item.ext-icon | default: 'pe-7s-like' }}"></i></a></li>
+              <li><a href="{{ item.ext-url }}" aria-label="Link to {{ item.ext-url }}" class="item-ext"><i class="{{ item.ext-icon | default: 'bi bi-hand-thumbs-up' }}"></i></a></li>
               {% endif %}
-              <li><a href="{{ site.baseurl }}/images/portfolio/{{ item.image }}" aria-label="Open image of {{ item_title_text }}" class="item-expand"><i class="pe-7s-exapnd2"></i></a></li>
+              <li><a href="{{ site.baseurl }}/images/portfolio/{{ item.image }}" aria-label="Open image of {{ item_title_text }}" class="item-expand"><i class="bi bi-box-arrow-up-right"></i></a></li>
             </ul>
           </div>
         </div>
