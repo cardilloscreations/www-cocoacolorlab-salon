@@ -12,7 +12,7 @@ footer.site-footer {
   background-color: $footer-background-color;
   width: 100%;
 
-  // Footer Information
+  // Footer Information Section
   .footer-info {
     padding: 80px 0;
 
@@ -31,7 +31,7 @@ footer.site-footer {
 
     // Social Media Icons
     .social-icons {
-      a  {
+      a {
         color: $global-text;
 
         &:hover,
@@ -42,15 +42,23 @@ footer.site-footer {
     }
   }
 
-  // Footer Copyright
-  .footer-copyright {
+  // Footer Legal Section
+  .footer-legal {
     font-size: 1.0rem;
     border-top: 1px solid $normal-gray;
     padding: 30px 0;
 
     .footer-text {
       width: 100%;
+
+      a {
+        color: $global-text;
+
+        &:hover,
+        &:active {
+          color: $primary;
+        }
+      }
     }
   }
-
 }
