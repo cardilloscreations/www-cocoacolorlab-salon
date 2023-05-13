@@ -42,8 +42,10 @@ jekyll-archives:
 #######################################################
 #######################################################
 
-# This is your site title
+# This is the site title
 title: Cocoa Color Lab Salon
+# This is the site description
+description: Cocoa Color Lab Salon strives to be the best hair salon in Cocoa, FL and Cocoa Beach, FL.
 # Website language
 lang: en-US
 # Header Title
@@ -76,7 +78,18 @@ youtube: "https://www.youtube.com/@CocoaColorLabSalon"
 about-title: About Us
 about-description-short: Cocoa Color Lab Salon by Lisa Cardillo.
 about-description-long: >
-  Lisa Cardillo is a master hair stylist and colorist who is licensed in New York, Maryland, and Florida. She currently owns and operates <a href="https://toughlove.salon">Tough Love Salon</a> in Severna Park, MD and travels there weekly. This website is for the new shop that she is opening in Cocoa, FL alongside her husband at the <a href="https://cocoacolorlab.com">Cocoa Color Lab</a>.
+  Lisa Cardillo is a master hair stylist and colorist who is licensed in New York, Maryland, and Florida.
+  She currently owns and operates <a href="https://toughlove.salon">Tough Love Salon</a> in Severna Park, MD.
+  This website is for the new salon that she is opening in Cocoa, FL alongside her husband at the <a href="https://cocoacolorlab.com">Cocoa Color Lab</a>.
+
+#####################################
+#############   Services   #############
+#####################################
+services-title: Services
+services-description-short: Services provided at Cocoa Color Lab Salon.
+services-description-long: >
+  Our salon is designed to provide a modern upscale atmosphere with premium equipment and brands that are optimal for colorists and our clients.
+  Aside from hair cuts and coloring, specialty services will include color correction, highlighting, blonding, balayage, ombre, and keratin straightening.
 
 #####################################
 ############  Portfolio  ############
