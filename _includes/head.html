@@ -16,6 +16,16 @@
   <link rel="image_src" href="{{ page.image }}">
   {% endunless %}
 
+  {%- comment -%} Geo Location Meta {% endcomment %}
+  <meta name="DC.title" content="{{ page.title | strip_html }}" />
+  <meta name="geo.region" content="US-FL" />
+  <meta name="geo.placename" content="Cocoa" />
+  <meta name="geo.position" content="28.392256799126535;-80.74822732523504" />
+  <meta name="ICBM" content="28.392256799126535, -80.74822732523504" />
+  <meta name="city" content="Cocoa">
+  <meta name="state" content="Florida">
+  <mata name="zipcode" content="32922" />
+
   {%- comment -%} Open Graph Metadata {% endcomment %}
   <meta property="og:locale" content="{{ site.lang | replace: "-", "_" }}" />
   <meta property="og:site_name" content="{{ site.title }}">

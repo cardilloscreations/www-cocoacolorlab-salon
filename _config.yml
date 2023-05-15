@@ -45,7 +45,10 @@ jekyll-archives:
 # This is the site title
 title: Cocoa Color Lab Salon
 # This is the site description
-description: Cocoa Color Lab Salon strives to be the best hair salon in Cocoa, FL and Cocoa Beach, FL.
+description: >
+  An upscale salon with experienced stylists that strive to be the best hair salon in Cocoa, FL and Cocoa Beach, FL.
+  We specialize in color correction, highlights, blonding, balayage, ombre, and keratin straightening services.
+
 # Website language
 lang: en-US
 # Header Title
