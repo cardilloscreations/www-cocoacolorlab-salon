@@ -132,31 +132,4 @@ aside.site-sidebar {
     }
   }
 
-  // Newsletter Widget
-  .newsletter-widget {
-    .widget-content {
-
-      form.newsletter-email-signup {
-        .field-group {
-          margin-bottom: 20px;
-
-          input {
-            border-width: 2px;
-            padding: 20px;
-          }
-        }
-
-        .button-subscribe {
-          padding: 20px;
-          text-transform: uppercase;
-        }
-
-        p {
-          margin-top: 10px;
-        }
-      }
-
-    }
-  }
-
 }

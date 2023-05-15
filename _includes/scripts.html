@@ -1,22 +1,19 @@
-<!-- Importing Scripts -->
+{%- comment -%} jQuery CDN {% endcomment %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-<!-- jQuery CDN -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+{%- comment -%} If CDN fails than use local jQuery {% endcomment %}
+<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/jquery-3.6.4.min.js"><\/script>')</script>
 
-<!-- If CDN fails than use local jQuery -->
-<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/jquery-3.0.0.min.js"><\/script>')</script>
-
-<!-- Owl Carousel -->
+{%- comment -%} Owl Carousel {% endcomment %}
 <script src="{{ site.baseurl }}/js/carousel.min.js" charset="utf-8"></script>
 
-<!-- Parallaxing & SmoothScroll -->
+{%- comment -%} Parallaxing {% endcomment %}
 <script src="{{ site.baseurl }}/js/scrollax.min.js" charset="utf-8"></script>
 
+{%- comment -%} SmoothScroll {% endcomment %}
 {% if site.smooth-scroll %}
 <script src="{{ site.baseurl }}/js/smoothscroll.js" charset="utf-8"></script>
 {% endif %}
 
-<!-- Main JS -->
+{%- comment -%} Site Specific JS {% endcomment %}
 <script src="{{ site.baseurl }}/js/main.js" charset="utf-8"></script>
-
-{% include google-analytics.html %}

@@ -1,4 +1,3 @@
-<!-- Site Header -->
 <header class="site-header slim-header parallax" id="home" data-scrollax-parent="true">
 
 {% include header/hero-image.html %}
@@ -7,12 +6,12 @@
 
   {% include header/nav-bar.html %}
 
-  <!-- Site Header Banner -->
+  {%- comment -%} Site Header Banner {% endcomment %}
   <div class="row header-banner parent" data-scrollax="properties: { 'translateY': '48%', 'opacity': '1.4' }">
 
     <div class="heading-content text-center child-center-v">
 
-      <!-- Heading Title -->
+      {%- comment -%} Heading Title {% endcomment %}
       <div class="row heading-title">
         <h1 class="thin">{{ page.title }}</h1>
         {% if page.subtitle %}

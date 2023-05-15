@@ -1,5 +1,6 @@
-<!-- Site Head -->
 <head>
+  {% include google-analytics.html %}
+
   {%- comment -%} General Metadata {% endcomment %}
   <meta charset="utf-8" />
   <title>{{ page.title | strip_html }}</title>
@@ -41,11 +42,10 @@
   <meta name="twitter:image" content="{{ page.image }}">
   {% endunless %}
 
-  <!-- Importing Styles -->
+  {%- comment -%} Importing Styles {% endcomment %}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 
-  <!-- various forms of favicons !-->
-  <!-- see: https://realfavicongenerator.net/ !-->
+  {%- comment -%} see: https://realfavicongenerator.net/ {% endcomment %}
   <link rel="icon" sizes="any" type="image/svg+xml" href="/images/favicon/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=2023.05.08.21">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=2023.05.08.21">
@@ -56,6 +56,4 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=2023.05.08.21">
   <meta name="theme-color" content="#ffffff">
-
-  {% include google-analytics.html %}
 </head>

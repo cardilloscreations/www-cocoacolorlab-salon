@@ -1,24 +1,20 @@
-<!-- Portfolio Section -->
 <section class="site-section portfolio-section next-section-indicator" id="portfolio">
   <div class="container">
 
-    <!-- Section Heading -->
     <div class="row text-center">
 
-      <!-- Section Header -->
       <header class="col-md-8 col-md-push-2 col-sm-12 section-header">
         <h2>{{ site.portfolio-title }}</h2>
         <hr class="normal">
       </header>
 
-      <!-- Section Content -->
       <div class="col-md-8 col-md-push-2 col-sm-12 section-content">
         <p>{{ site.portfolio-description }}</p>
       </div>
 
     </div>
 
-    <!-- Filter Menu -->
+    {%- comment -%} Filter Menu {% endcomment %}
     <div class="row filter-menu-wrapper">
       <div class="col-md-8 col-md-push-2">
         <div class="filter-menu">
@@ -34,7 +30,7 @@
       </div>
     </div>
 
-    <!-- Portfolio Grid -->
+    {%- comment -%} Portfolio Grid {% endcomment %}
     <div class="row portfolio-grid">
 
       {% for item in site.portfolio %}
@@ -61,7 +57,7 @@
 
       {% endfor %}
 
-      <!-- Overlay Lightbox -->
+      {%- comment -%} Overlay Lightbox {% endcomment %}
       <div id="overlay" class="overlay"></div>
 
     </div>
