@@ -1,6 +1,8 @@
 <head>
   {% include google-analytics.html %}
 
+  {% capture abs_page_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
+
   {%- comment -%} General Metadata {% endcomment %}
   <meta charset="utf-8" />
   <title>{{ page.title | strip_html }}</title>
@@ -29,7 +31,7 @@
   {%- comment -%} Open Graph Metadata {% endcomment %}
   <meta property="og:locale" content="{{ site.lang | replace: "-", "_" }}" />
   <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta property="og:url" content="{{ abs_page_url }}">
   <meta property="og:title" content="{{ page.title }}">
   {% unless page.description == empty %}
   <meta property="og:description" content="{{ page.description | strip_newlines | truncatewords:200 }}">
@@ -43,7 +45,7 @@
 
   {%- comment -%} Twitter Metadata {% endcomment %}
   <meta name="twitter:site" content="{{ site.twitter | split: '/' | last }}">
-  <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta name="twitter:url" content="{{ abs_page_url }}">
   <meta name="twitter:title" content="{{ page.title }}">
   {% unless page.description == empty %}
   <meta name="twitter:description" content="{{ page.description | strip_newlines | truncatewords:200 }}">
@@ -66,4 +68,7 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=2023.05.08.21">
   <meta name="theme-color" content="#ffffff">
+
+  {%- comment -%} Canoncial URL needed when crawling variants (e.g., root vs index.html) {% endcomment %}
+  <link rel="canonical" href="{{ abs_page_url }}" />
 </head>
