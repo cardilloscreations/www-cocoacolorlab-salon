@@ -1,6 +1,4 @@
 <head>
-  {% include google-analytics.html %}
-
   {% capture abs_page_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
 
   {%- comment -%} General Metadata {% endcomment %}
@@ -71,4 +69,6 @@
 
   {%- comment -%} Canoncial URL needed when crawling variants (e.g., root vs index.html) {% endcomment %}
   <link rel="canonical" href="{{ abs_page_url }}" />
+
+  {% include google-analytics.html %}
 </head>
