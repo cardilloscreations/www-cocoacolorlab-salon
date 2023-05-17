@@ -2,14 +2,14 @@
   {% capture abs_page_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
 
   {%- comment -%} General Metadata {% endcomment %}
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>{{ page.title | strip_html }}</title>
   <meta name="title" content="{{ page.title | strip_html }}">
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
   <meta http-equiv="Cache-Control" content="max-age=7200">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" media="print" rel="stylesheet">
 
   {% unless page.image == empty %}
@@ -17,17 +17,17 @@
   {% endunless %}
 
   {%- comment -%} Geo Location Meta {% endcomment %}
-  <meta name="DC.title" content="{{ page.title | strip_html }}" />
-  <meta name="geo.region" content="US-FL" />
-  <meta name="geo.placename" content="Cocoa" />
-  <meta name="geo.position" content="28.392256799126535;-80.74822732523504" />
-  <meta name="ICBM" content="28.392256799126535, -80.74822732523504" />
+  <meta name="DC.title" content="{{ page.title | strip_html }}">
+  <meta name="geo.region" content="US-FL">
+  <meta name="geo.placename" content="Cocoa">
+  <meta name="geo.position" content="28.392256799126535;-80.74822732523504">
+  <meta name="ICBM" content="28.392256799126535, -80.74822732523504">
   <meta name="city" content="Cocoa">
   <meta name="state" content="Florida">
-  <mata name="zipcode" content="32922" />
+  <meta name="zipcode" content="32922">
 
   {%- comment -%} Open Graph Metadata {% endcomment %}
-  <meta property="og:locale" content="{{ site.lang | replace: "-", "_" }}" />
+  <meta property="og:locale" content="{{ site.lang | replace: "-", "_" }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ abs_page_url }}">
   <meta property="og:title" content="{{ page.title }}">
@@ -68,7 +68,7 @@
   <meta name="theme-color" content="#ffffff">
 
   {%- comment -%} Canoncial URL needed when crawling variants (e.g., root vs index.html) {% endcomment %}
-  <link rel="canonical" href="{{ abs_page_url }}" />
+  <link rel="canonical" href="{{ abs_page_url }}">
 
   {% include google-analytics.html %}
 </head>
