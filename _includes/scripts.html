@@ -1,19 +1,19 @@
 {%- comment -%} jQuery CDN {% endcomment %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 {%- comment -%} If CDN fails than use local jQuery {% endcomment %}
-<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/jquery-3.6.4.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script defer src="{{ site.baseurl }}/js/jquery-3.6.4.min.js"><\/script>')</script>
 
 {%- comment -%} Owl Carousel {% endcomment %}
-<script src="{{ site.baseurl }}/js/carousel.min.js" charset="utf-8"></script>
+<script defer src="{{ site.baseurl }}/js/carousel.min.js" charset="utf-8"></script>
 
 {%- comment -%} Parallaxing {% endcomment %}
-<script src="{{ site.baseurl }}/js/scrollax.min.js" charset="utf-8"></script>
+<script defer src="{{ site.baseurl }}/js/scrollax.min.js" charset="utf-8"></script>
 
 {%- comment -%} SmoothScroll {% endcomment %}
 {% if site.smooth-scroll %}
-<script src="{{ site.baseurl }}/js/smoothscroll.js" charset="utf-8"></script>
+<script defer src="{{ site.baseurl }}/js/smoothscroll.js" charset="utf-8"></script>
 {% endif %}
 
 {%- comment -%} Site Specific JS {% endcomment %}
-<script src="{{ site.baseurl }}/js/main.js" charset="utf-8"></script>
+<script defer src="{{ site.baseurl }}/js/main.js" charset="utf-8"></script>
