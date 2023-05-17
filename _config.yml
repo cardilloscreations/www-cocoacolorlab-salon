@@ -44,10 +44,10 @@ jekyll-archives:
 
 # This is the site title
 title: Cocoa Color Lab Salon
-# This is the site description
+# This is the site description - must be between 25 and 160 characters for Bing SEO
 description: >
-  An upscale salon with experienced stylists that strive to be the best hair salon in Cocoa, FL and Cocoa Beach, FL.
-  We specialize in color correction, highlights, blonding, balayage, ombre, and keratin straightening services.
+  Upscale hair salon that strives to be the best in Brevard County.
+  Masters of color, highlights, blonding, balayage, ombre, and keratin straightening.
 
 # Website language
 lang: en-US
