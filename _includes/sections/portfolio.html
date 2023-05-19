@@ -14,7 +14,7 @@
 
     </div>
 
-    {%- comment -%} Filter Menu {% endcomment %}
+    {%- comment %} Filter Menu {% endcomment -%}
     <div class="row filter-menu-wrapper">
       <div class="col-md-8 col-md-push-2">
         <div class="filter-menu">
@@ -30,14 +30,14 @@
       </div>
     </div>
 
-    {%- comment -%} Portfolio Grid {% endcomment %}
+    {%- comment %} Portfolio Grid {% endcomment -%}
     <div class="row portfolio-grid">
 
       {% for item in site.portfolio %}
 
       <div class="col-md-6 col-sm-6 item visible {% for category in item.categories %} {{ category | replace:' ','-' | downcase }}{% endfor %}">
         <figure class="img-wrap">
-          <img loading="lazy" src="{{ site.baseurl }}/images/portfolio/{{ item.image }}" alt="Portfolio Item Image" />
+          <img loading="lazy" src="{{ site.baseurl }}/images/portfolio/{{ item.image }}" alt="Portfolio Item Image">
         </figure>
         <div class="item-content">
           <h3>{{ item.title }}</h3>
@@ -57,7 +57,7 @@
 
       {% endfor %}
 
-      {%- comment -%} Overlay Lightbox {% endcomment %}
+      {%- comment %} Overlay Lightbox {% endcomment -%}
       <div id="overlay" class="overlay"></div>
 
     </div>

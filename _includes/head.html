@@ -1,7 +1,7 @@
 <head>
-  {% capture abs_page_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
+  {%- capture abs_page_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture -%}
 
-  {%- comment -%} General Metadata {% endcomment %}
+  {%- comment %} General Metadata {% endcomment -%}
   <meta charset="utf-8">
   <title>{{ page.title | strip_html }}</title>
   <meta name="title" content="{{ page.title | strip_html }}">
@@ -12,11 +12,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" media="print" rel="stylesheet">
 
-  {% unless page.image == empty %}
+  {%- if page.image -%}
   <link rel="image_src" href="{{ page.image }}">
-  {% endunless %}
+  {%- endif -%}
 
-  {%- comment -%} Geo Location Meta {% endcomment %}
+  {%- comment %} Geo Location Meta {% endcomment -%}
   <meta name="DC.title" content="{{ page.title | strip_html }}">
   <meta name="geo.region" content="US-FL">
   <meta name="geo.placename" content="Cocoa">
@@ -26,36 +26,36 @@
   <meta name="state" content="Florida">
   <meta name="zipcode" content="32922">
 
-  {%- comment -%} Open Graph Metadata {% endcomment %}
+  {%- comment %} Open Graph Metadata {% endcomment -%}
   <meta property="og:locale" content="{{ site.lang | replace: "-", "_" }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ abs_page_url }}">
   <meta property="og:title" content="{{ page.title }}">
-  {% unless page.description == empty %}
+  {%- if page.description -%}
   <meta property="og:description" content="{{ page.description | strip_newlines | truncatewords:200 }}">
-  {% endunless %}
-  {%- unless page.image == empty -%}
+  {%- endif -%}
+  {%- if page.image -%}
   <meta property="og:image" content="{{ page.image }}">
-  {% endunless %}
+  {%- endif -%}
   {%- if page.youtubeid -%}
   <meta property="og:video" content="https://youtu.be/{{ page.youtubeid }}">
-  {% endif %}
+  {%- endif -%}
 
-  {%- comment -%} Twitter Metadata {% endcomment %}
+  {%- comment %} Twitter Metadata {% endcomment -%}
   <meta name="twitter:site" content="{{ site.twitter | split: '/' | last }}">
   <meta name="twitter:url" content="{{ abs_page_url }}">
   <meta name="twitter:title" content="{{ page.title }}">
-  {% unless page.description == empty %}
+  {%- if page.description -%}
   <meta name="twitter:description" content="{{ page.description | strip_newlines | truncatewords:200 }}">
-  {% endunless %}
-  {%- unless page.image == empty -%}
+  {%- endif -%}
+  {%- if page.image -%}
   <meta name="twitter:image" content="{{ page.image }}">
-  {% endunless %}
+  {%- endif -%}
 
-  {%- comment -%} Importing Styles {% endcomment %}
+  {%- comment %} Importing Styles {% endcomment -%}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 
-  {%- comment -%} see: https://realfavicongenerator.net/ {% endcomment %}
+  {%- comment %} see: https://realfavicongenerator.net/ {% endcomment -%}
   <link rel="icon" sizes="any" type="image/svg+xml" href="/images/favicon/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=2023.05.08.21">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=2023.05.08.21">
@@ -67,7 +67,7 @@
   <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=2023.05.08.21">
   <meta name="theme-color" content="#ffffff">
 
-  {%- comment -%} Canoncial URL needed when crawling variants (e.g., root vs index.html) {% endcomment %}
+  {%- comment %} Canoncial URL needed when crawling variants (e.g., root vs index.html) {% endcomment -%}
   <link rel="canonical" href="{{ abs_page_url }}">
 
   {% include google-analytics.html %}
