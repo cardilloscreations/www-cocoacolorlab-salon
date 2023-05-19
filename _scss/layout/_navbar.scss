@@ -1,0 +1,17 @@
+/**
+ *  About Section Style
+ **/
+
+nav.navbar {
+    background-color: $navbar-bg;
+
+    .navbar-brand {
+        width: auto;
+        max-width: 75%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}

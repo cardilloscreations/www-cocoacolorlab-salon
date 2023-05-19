@@ -3,50 +3,20 @@
 # only Main files contain this front matter, not partials.
 ---
 
-/**
- *  Heavily modified but the original template was:
- *
- *  Theme Name: Sera - OnePage Multi-Purpose Theme
- *  Theme URI: https://github.com/ohkimur/
- *  Author: Ohkimur
- *  Author URI: https://github.com/ohkimur/
- *  Description: OnePage Multi-Purpose Theme
- *  Version: 1.0
- *  License: GNU General Public License v2 or later
- *  License URI: http://www.gnu.org/licenses/gpl-2.0.html
- *  Tags: onepage, blog, multiple-columns, left-sidebar, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, post-formats, threaded-comments, translation-ready
- *  Text Domain: sera-onepage
- *
- *  @package ohkimur_project
- *
- **/
+// Modules
+@import "modules/_config",
+        "modules/_color-skin";
 
- @charset "UTF-8";
-
- // Modules
- @import "modules/_reset",
-         "modules/_config",
-         "modules/_color-skin",
-         "modules/_class-tools",
-         "modules/_bootstrap-grid",
-         "modules/_responsive-embed",
-         "modules/_animations",
-         "modules/_owl-carousel";
-
- // Components
- @import "components/_forms",
-         "components/_social-icons",
-         "components/_tags-box",
-         "components/_buttons";
+// Components
+@import "components/_social-icons",
+        "components/_tags-box",
+        "components/_buttons";
 
  // Layout
  @import "layout/_global",
+         "layout/_navbar",
          "layout/_header",
-         "layout/_header-responsive",
          "layout/_sections",
-         "layout/_sidebar",
          "layout/_about",
-         "layout/_portfolio",
+         "layout/_related",
          "layout/_footer";
-
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");

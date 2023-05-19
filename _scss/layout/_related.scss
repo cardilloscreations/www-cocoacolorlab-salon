@@ -1,0 +1,17 @@
+/**
+ *  Sections Style
+ **/
+
+section.site-section.related-section {
+  .card {
+    .card-img-top {
+      object-fit: cover;
+    }
+
+    .card-body {
+      .card-text {
+        color: $light-secondary;
+      }
+    }
+  }
+}

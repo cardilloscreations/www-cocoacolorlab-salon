@@ -1,30 +1,34 @@
 <footer class="site-footer" id="footer">
   <div class="container">
 
-    <div class="row">
-      <div class="col-md-6 col-md-push-3 footer-info text-center">
-
-        <div class="footer-logo">
-          <img loading="lazy" src="{{ site.baseurl }}/images/logo-focus.svg" width="250" alt="Cocoa Color Lab Logo">
-        </div>
-
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6 col-md-push-3 footer-info">
+        
         <div class="footer-info-text">
           <p>{{ site.footer-description }}</p>
         </div>
 
         <div class="social-icons">
           <ul class="icons">
-            <li><a href="{{ site.facebook }}" aria-label="Facebook" target="_blank"><i class="bi bi-facebook"></i></a></li>
-            <li><a href="{{ site.instagram }}" aria-label="Instagram" target="_blank"><i class="bi bi-instagram"></i></a></li>
-            <li><a href="{{ site.tiktok }}" aria-label="TikTok" target="_blank"><i class="bi bi-tiktok"></i></a></li>
-            <li><a href="{{ site.youtube }}" aria-label="YouTube" target="_blank"><i class="bi bi-youtube"></i></a></li>
+            <li><a href="{{ site.facebook }}" aria-label="Facebook" target="_blank">
+              <img src="{{ site.baseurl | append: site.facebook-image }}" alt="Facebook" height="100" width="100">
+            </a></li>
+            <li><a href="{{ site.instagram }}" aria-label="Instagram" target="_blank">
+              <img src="{{ site.baseurl | append: site.instagram-image }}" alt="Instagram" height="100" width="100">
+            </a></li>
+            <li><a href="{{ site.tiktok }}" aria-label="TikTok" target="_blank">
+              <img src="{{ site.baseurl | append: site.tiktok-image }}" alt="TikTok" height="100" width="100">
+            </a></li>
+            <li><a href="{{ site.youtube }}" aria-label="YouTube" target="_blank">
+              <img src="{{ site.baseurl | append: site.youtube-image }}" alt="YouTube" height="100" width="100">
+            </a></li>
           </ul>
         </div>
 
       </div>
 
       <div class="col-md-8 col-md-push-2 footer-legal">
-        <div class="footer-text text-center">
+        <div class="footer-text">
           <p><a href="{{ site.baseurl }}/legal/privacy">Privacy Policy</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="{{ site.baseurl }}/legal/terms">Terms of Use</a></p>
           <p>Copyright &copy; {{ site.footer-copyright-year }} by {{ site.footer-copyright-text }}</p>
         </div>
@@ -33,6 +37,3 @@
 
   </div>
 </footer>
-
-{%- comment %} Go To Top Button {% endcomment -%}
-<a href="#home" aria-label="Go To Top" class="go-to-top-button"><i class="bi bi-chevron-up"></i></a>

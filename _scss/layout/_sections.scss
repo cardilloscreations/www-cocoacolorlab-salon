@@ -1,15 +1,17 @@
 /**
- *
  *  Sections Style
- *
- *  @package ohkimur_layout
- *
  **/
-
+ 
 section.site-section {
-  padding-top: 100px;
+  padding-top: 3em;
   background: $section-bg;
-  // z-index: 1;
+  z-index: 1;
+
+  // Scroll offset for navbar
+  scroll-margin-top: 62px;
+  @media (min-width: 768px) {
+    scroll-margin-top: 110px;
+  }
 
   // Section Header
   header.section-header {
@@ -17,11 +19,22 @@ section.site-section {
     h1, h2, h3, h4, h5, h6 {
       font-weight: bold;
       text-transform: uppercase;
-      color: $secondary;
+      color: $light-primary;
     }
 
     hr.normal {
-      margin: 40px auto;
+      margin: 1.55em auto;
+    }
+  }
+
+  .section-content {
+    .lead {
+      font-size: 1.55em;
+      font-weight: bold;
+      font-style: italic;
+    }
+    blockquote {
+      font-size: 1.25em;
     }
   }
 
@@ -50,8 +63,9 @@ section.site-section {
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
 
-      border-top: 30px solid $background-color;
+      border-top: 30px solid $light-bg;
     }
 
   }
+
 }

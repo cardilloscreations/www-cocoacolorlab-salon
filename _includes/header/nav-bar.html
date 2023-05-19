@@ -1,33 +1,28 @@
-<div class="row site-navigation-bar parent">
-
-  {%- comment %} Logo {% endcomment -%}
-  <div class="col-sm-4 col-xs-6 logo child-center-v">
-    <a href="{{ site.baseurl }}/index.html" aria-label="Link to Main Home Page"><img src="{{ site.baseurl }}/images/logo.svg" width="500"
-        alt="{{ site.title }} Logo"></a>
+<nav id="site-navbar" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top flex-column">
+  <div class="w-100 d-flex">
+    <a class="navbar-brand mx-auto" href="{{ site.baseurl }}/#" aria-label="Link to Main Home Page">
+      <img src="{{ site.baseurl }}/images/logo.svg" height="52" alt="{{ site.title }} Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
-
-  {%- comment %} Toggle Mobile Menu {% endcomment -%}
-  <div class="col-xs-6 toggle-menu child-center-v">
-
-    {%- comment %} Burger Menu {% endcomment -%}
-    <div class="navTrigger">
-      <i></i><i></i><i></i>
-    </div>
-
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        {%- if include.activeHome == true %}
+        <a class="nav-link active" aria-current="page" href="{{ site.baseurl }}/#home">Home</a>
+        {% else %}
+        <a class="nav-link" href="{{ site.baseurl }}/#home">Home</a>
+        {% endif -%}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/#related">Related</a>
+      </li>
+    </ul>
   </div>
-
-  {%- comment %} Navigation Bar {% endcomment -%}
-  <div class="col-sm-8 col-xs-6 navigation-bar child-center-v">
-
-    {%- comment %} Navigation Menu {% endcomment -%}
-    <nav id="navMenu" class="nav-menu">
-      <ul class="menu">
-        <li class="current-menu-item"><a href="{{ site.baseurl }}/#home">Home</a></li>
-        <li><a href="{{ site.baseurl }}/#about">About</a></li>
-        <li><a href="{{ site.baseurl }}/#portfolio">Sites</a></li>
-      </ul>
-    </nav>
-
-  </div>
-
-</div>
+</nav>

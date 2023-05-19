@@ -1,9 +1,5 @@
 /**
- *
  *  Buttons Style
- *
- *  @package ohkimur_components
- *
  **/
 
 // Buttons
@@ -11,8 +7,8 @@
   display: inline-block;
   width: auto;
   max-width: 100%;
-  color: $primary;
-  border: 2px solid $primary;
+  color: $light-primary;
+  border: 2px solid $light-primary;
   padding: 0.8em 2em;
   cursor: pointer;
   font-size: 1rem;
@@ -21,14 +17,14 @@
 
   &.button-focus {
     color: $white;
-    background-color: $primary;
+    background-color: $light-primary;
   }
 
   &:hover,
   &:active {
     color: $white;
-    border-color: lighten($primary, 20%);
-    background-color: lighten($primary, 20%);
+    border-color: lighten($light-primary, 20%);
+    background-color: lighten($light-primary, 20%);
   }
 
 }
@@ -47,20 +43,20 @@
   text-transform: uppercase;
 
   &.button-focus {
-    border-color: $primary;
-    background-color: $primary;
+    border-color: $light-primary;
+    background-color: $light-primary;
   }
 
   &.button-blue {
-    color: $primary;
-    border-color: $primary;
+    color: $light-primary;
+    border-color: $light-primary;
   }
 
   &:hover,
   &:active {
     color: $white;
-    border-color: lighten($primary, 20%);
-    background-color: lighten($primary, 20%);
+    border-color: lighten($light-primary, 20%);
+    background-color: lighten($light-primary, 20%);
   }
 
 }

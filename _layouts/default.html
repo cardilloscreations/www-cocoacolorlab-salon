@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
 
-{% include head.html %}
+{%- include head.html preloadHero=true -%}
 
 <body>
 
-  <div id="page-loader" class="page-loader"><span class="load-icon"></span></div>
+  {%- include header/nav-bar.html activeHome=false -%}
 
-  {% include header/header-site.html %}
+  {%- include header/header-slim.html -%}
 
-  {{ content }}
+  <div class="container">
+    {{ content }}
+  </div>
 
-  {% include footer.html %}
+  {%- include footer.html -%}
 
-  {% include scripts.html %}
+  {%- include scripts/ext-scripts.html -%}
 
 </body>
 

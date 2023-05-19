@@ -1,7 +1,5 @@
 # Authoring Content
 
-This website is based on a licensed copy of the Sera Jekyll Theme.
-
 The instructions below are useful reminders but it's a fairly common workflow for any Jekyll based website.
 
 ## System Preparation

@@ -1,5 +1,4 @@
 #
-# Sera - OnePage Jekyll Theme
 # Configuration File
 #
 
@@ -16,31 +15,9 @@ baseurl: ""
 # the base hostname & protocol for your site
 url: "https://cocoacolorlab.salon"
 
-####################################
-######   Optional Features    ######
-####################################
-smooth-scroll: false
-
-####################################
-###########   Plugins    ###########
-####################################
-plugins:
-  - jekyll-archives
-
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: "archive"
-  permalinks:
-    category: "/category/:name/"
-    tag: "/tag/:name/"
-
-#######################################################
-#######################################################
-###############   HEADER INFORMATION   ###############
-#######################################################
-#######################################################
+##
+## HEADER INFORMATION
+##
 
 # This is the site title
 title: Cocoa Color Lab Salon
@@ -54,7 +31,8 @@ lang: en-US
 # Header Title
 header-title: Cocoa Color Lab Salon
 # Header Tagline
-header-tagline: Cocoa Color Lab Salon
+header-tagline1: The beauty of hair
+header-tagline2: The science of perfection
 
 #
 # This is your email adress, contact from send here all emails from contact section
@@ -63,78 +41,72 @@ header-tagline: Cocoa Color Lab Salon
 #
 email: hello@cocoacolorlab.salon
 
-####################################
-######  Global Social Links   ######
-####################################
+##
+## Global Social Links
+##
 facebook: "https://www.facebook.com/CocoaColorLab.salon/"
 instagram: "https://www.instagram.com/CocoaColorLab.salon/"
 tiktok: "https://www.tiktok.com/@CocoaColorLab.salon"
 youtube: "https://www.youtube.com/@CocoaColorLabSalon"
 
-#########################
-######   Widgets   ######
-#########################
+facebook-image: "/images/icons/facebook.svg"
+instagram-image: "/images/icons/instagram.svg"
+tiktok-image: "/images/icons/tiktok.svg"
+youtube-image: "/images/icons/youtube.svg"
 
-#####################################
-#############   About   #############
-#####################################
+##
+## About
+##
 about-title: About Us
-about-description-short: Cocoa Color Lab Salon by Lisa Cardillo.
+about-description-short: Striving to be the best in Cocoa, FL.
 about-description-long: >
   Lisa Cardillo is a master hair stylist and colorist who is licensed in New York, Maryland, and Florida.
   She currently owns and operates <a href="https://toughlove.salon">Tough Love Salon</a> in Severna Park, MD.
   This website is for the new salon that she is opening in Cocoa, FL alongside her husband at the <a href="https://cocoacolorlab.com">Cocoa Color Lab</a>.
 
-#####################################
-#############   Services   #############
-#####################################
+##
+## Services
+##
 services-title: Services
-services-description-short: Services provided at Cocoa Color Lab Salon.
+services-description-short: Services provided at our salon.
 services-description-long: >
   Our salon is designed to provide a modern upscale atmosphere with premium equipment and brands that are optimal for colorists and our clients.
   Aside from hair cuts and coloring, specialty services will include color correction, highlighting, blonding, balayage, ombre, and keratin straightening.
 
-#####################################
-############  Portfolio  ############
-#####################################
-portfolio-title: Related Sites
-portfolio-description: >
-  Click the images below to visit the site for each service.
+##
+## Related
+##
+related-title: Related Sites
 
-#
-# Portfolio Grid
-#
-portfolio-categories:
-  [Lisa, Ray]
-portfolio:
-  # Portfolio Item - Salon
+related:
+  # Salon
   - title: <span title="CocoaColorLab.Salon">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.S<span class="thin">alon</span></span>
     categories: [Lisa]
-    image: colorlab-salon-portfolio-image.webp
+    image: colorlab-salon-related-image.svg
     info: Lisa's hair salon services (this site)
     url: "https://cocoacolorlab.salon"
-  # Portfolio Item - Com
+  # Com
   - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.C<span class="thin">om</span></span>
     categories: [Lisa,Ray]
-    image: colorlab-com-portfolio-image.webp
+    image: colorlab-com-related-image.svg
     info: Main company website
     url: "https://cocoacolorlab.com"
-  # Portfolio Item - Ink
+  # Ink
   - title: <span title="CocoaColorLab.Ink">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.I<span class="thin">nk</span></span>
     categories: [Ray]
-    image: colorlab-ink-portfolio-image.webp
+    image: colorlab-ink-related-image.svg
     info: Ray's tattoo services
     url: "https://cocoacolorlab.ink"
-  # Portfolio Item - Art
+  # Art
   - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.A<span class="thin">rt</span></span>
     categories: [Ray]
-    image: colorlab-art-portfolio-image.webp
+    image: colorlab-art-related-image.svg
     info: Ray's art portfolio
     url: "https://cocoacolorlab.art"
 
-#####################################
-#############   Footer   ############
-#####################################
-footer-description: Cocoa Color Lab Salon is also on social media.
+##
+## Footer
+##
+footer-description: Find us on social media.
 footer-copyright-text: Cocoa Color Lab, LLC
 footer-copyright-year: 2023

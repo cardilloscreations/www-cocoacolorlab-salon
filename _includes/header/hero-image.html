@@ -1,6 +1,6 @@
-<div class="parallax-wrapper">
-    <div class="cover" data-scrollax="properties: { 'translateY': '48%' }">
-        <img class="hidden-xs hidden-sm" loading="lazy" src="{{ site.baseurl }}/images/header-image.webp" alt="{{ site.header-title }}">
-        <img class="hidden-md hidden-lg" loading="lazy" src="{{ site.baseurl }}/images/header-image.mobile.webp" alt="{{ site.header-title }}">
-    </div>
-</div>
+<picture>
+    <source media="(orientation: landscape)" srcset="{{ site.baseurl }}/images/header-image.land.webp">
+    <source media="(orientation: portrait)" srcset="{{ site.baseurl }}/images/header-image.port.webp">
+    <img class="hero-image" src="{{ site.baseurl }}/images/header-image.land.webp"
+        alt="{{ site.header-title }}">
+</picture>

@@ -1,9 +1,5 @@
 /**
- *
  *  Blog Section Style
- *
- *  @package ohkimur_layout
- *
  **/
 
 section.blog-section {
@@ -38,7 +34,7 @@ section.blog-section {
           // Title
           span.title {
             float: left;
-            color: $secondary;
+            color: $light-primary;
             font-weight: bold;
             width: 100px;
           }
@@ -109,7 +105,7 @@ section.blog-section {
             margin: 50px 0;
 
             h3.title {
-              color: $secondary;
+              color: $light-primary;
               font-size: 2rem;
             }
           }
@@ -141,17 +137,17 @@ section.blog-section {
             margin-bottom: 10px;
 
             a {
-              color: $secondary;
+              color: $light-primary;
 
               &:hover,
               &:active {
-                color: $primary;
+                color: $light-secondary;
               }
             }
           }
 
           h4.category {
-            color: $primary;
+            color: $light-primary;
             text-transform: capitalize;
           }
         }
@@ -170,14 +166,14 @@ section.blog-section {
           width: 100px;
           float: left;
           padding-right: 30px;
-          color: $white;
+          color: $light-secondary;
           text-transform: uppercase;
 
           .date {
             width: 100%;
             padding-bottom: 100%;
             margin-bottom: 5px;
-            background: $primary;
+            background: $light-primary;
 
             .day {
               font-size: 1.875rem;
@@ -191,7 +187,7 @@ section.blog-section {
           .time {
             width: 100%;
             padding: 10px 0;
-            background: $primary;
+            background: $light-primary;
           }
 
         }

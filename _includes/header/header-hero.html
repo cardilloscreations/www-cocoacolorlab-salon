@@ -1,0 +1,33 @@
+<header class="site-header hero-header" id="home">
+
+  {%- comment %} Site Header Banner {% endcomment -%}
+  <div class="header-banner">
+
+    {% include header/hero-image.html %}
+
+    <div class="heading-content text-center position-absolute top-50 start-50 translate-middle">
+
+      {%- comment %} Heading Title {% endcomment -%}
+      <div class="row heading-title bg-transparent-black rounded-3">
+        <h1 class="my-2">{{ site.header-title }}</h1>
+        <hr class="small mx-auto my-2">
+        <h2 class="thin my-2">{{ site.header-tagline1 }}</h2>
+        <h2 class="thin my-2">{{ site.header-tagline2 }}</h2>
+      </div>
+
+      {%- comment -%} TODO
+      {%- comment %} Header Buttons {% endcomment -%}
+      <div class="row buttons-header">
+        <div class="col-lg-3 col-lg-push-3 col-md-4 col-md-push-2 col-sm-8 col-sm-push-2 col-10 col-push-1"><a
+            href="{{ site.header-focus-button.url }}" class="button-cta button-focus">{{
+            site.header-focus-button.title }}</a></div>
+        <div class="col-lg-3 col-lg-push-3 col-md-4 col-md-push-2 col-sm-8 col-sm-push-2 col-10 col-push-1"><a
+            href="{{ site.header-secondary-button.url }}" class="button-cta">{{ site.header-secondary-button.title
+            }}</a></div>
+      </div>
+      {%- endcomment -%}
+    </div>
+
+  </div>
+
+</header>

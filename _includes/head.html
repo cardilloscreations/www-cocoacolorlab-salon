@@ -1,23 +1,50 @@
 <head>
+
+  {%- comment %} Warm up CDN references with Pre-Connect {% endcomment -%}
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   {%- capture abs_page_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture -%}
+  {%- capture page_title %}{{ page.title | strip_html }}{% endcapture -%}
 
   {%- comment %} General Metadata {% endcomment -%}
   <meta charset="utf-8">
-  <title>{{ page.title | strip_html }}</title>
-  <meta name="title" content="{{ page.title | strip_html }}">
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-
-  <meta http-equiv="Cache-Control" content="max-age=7200">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" media="print" rel="stylesheet">
+  <title>{{ page_title }}</title>
+  <meta name="title" content="{{ page_title }}">
+  <meta name="description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  {%- comment %} Preload the hero image (must be after viewport for media query) {% endcomment -%}
+  {%- if include.preloadHero == true %}
+  <link rel="preload" media="(orientation: landscape)" href="{{ site.baseurl }}/images/header-image.land.webp" as="image" fetchpriority="high">
+  <link rel="preload" media="(orientation: portrait)" href="{{ site.baseurl }}/images/header-image.port.webp" as="image" fetchpriority="high">
+  {% endif -%}
+
+  {%- comment %} Preload the any icon images {% endcomment -%}
+  <link rel="preload" href="{{ site.baseurl | append: site.facebook-image }}" as="image">
+  <link rel="preload" href="{{ site.baseurl | append: site.instagram-image }}" as="image">
+  <link rel="preload" href="{{ site.baseurl | append: site.tiktok-image }}" as="image">
+  <link rel="preload" href="{{ site.baseurl | append: site.youtube-image }}" as="image">
+
+  {%- comment %} 3rd Party Styles {% endcomment -%}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  {%- comment %} Site Styles {% endcomment -%}
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 
   {%- if page.image -%}
   <link rel="image_src" href="{{ page.image }}">
   {%- endif -%}
 
   {%- comment %} Geo Location Meta {% endcomment -%}
-  <meta name="DC.title" content="{{ page.title | strip_html }}">
+  <meta name="DC.title" content="{{ page_title }}">
   <meta name="geo.region" content="US-FL">
   <meta name="geo.placename" content="Cocoa">
   <meta name="geo.position" content="28.392256799126535;-80.74822732523504">
@@ -27,10 +54,10 @@
   <meta name="zipcode" content="32922">
 
   {%- comment %} Open Graph Metadata {% endcomment -%}
-  <meta property="og:locale" content="{{ site.lang | replace: "-", "_" }}">
+  <meta property="og:locale" content="{{ site.lang | replace: " -", "_" }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ abs_page_url }}">
-  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:title" content="{{ page_title }}">
   {%- if page.description -%}
   <meta property="og:description" content="{{ page.description | strip_newlines | truncatewords:200 }}">
   {%- endif -%}
@@ -44,16 +71,13 @@
   {%- comment %} Twitter Metadata {% endcomment -%}
   <meta name="twitter:site" content="{{ site.twitter | split: '/' | last }}">
   <meta name="twitter:url" content="{{ abs_page_url }}">
-  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:title" content="{{ page_title }}">
   {%- if page.description -%}
   <meta name="twitter:description" content="{{ page.description | strip_newlines | truncatewords:200 }}">
   {%- endif -%}
   {%- if page.image -%}
   <meta name="twitter:image" content="{{ page.image }}">
   {%- endif -%}
-
-  {%- comment %} Importing Styles {% endcomment -%}
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 
   {%- comment %} see: https://realfavicongenerator.net/ {% endcomment -%}
   <link rel="icon" sizes="any" type="image/svg+xml" href="/images/favicon/favicon.svg">
@@ -70,5 +94,6 @@
   {%- comment %} Canoncial URL needed when crawling variants (e.g., root vs index.html) {% endcomment -%}
   <link rel="canonical" href="{{ abs_page_url }}">
 
-  {% include google-analytics.html %}
+  {% include scripts/google-analytics.html %}
+
 </head>
