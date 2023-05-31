@@ -7,12 +7,13 @@ footer.site-footer {
   color: $footer-primary;
   background-color: $footer-bg;
   width: 100%;
-  margin-top: 2em;
+  margin-top: $section-margin;
   text-align: center;
 
   // Footer Information Section
   .footer-info {
     padding-bottom: .75em;
+    background-color: $footer-bg-lighter;
 
     .footer-info-text {
       font-size: 1.25rem;
@@ -35,12 +36,9 @@ footer.site-footer {
   // Footer Legal Section
   .footer-legal {
     font-size: 1.0rem;
-    border-top: 1px solid $footer-primary;
     padding: 1em 0;
 
     .footer-text {
-      width: 100%;
-
       a {
         color: $footer-primary;
 

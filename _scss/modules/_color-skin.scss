@@ -5,7 +5,7 @@
 // Global Pallete
 $white: #fff;
 $black: #000;
-$black-transparent:  rgba($black, 0.9);
+$black-transparent: rgba($black, 0.9);
 $light-blue: #f4f8f9;
 
 // Light Color Scheme Areas
@@ -27,6 +27,7 @@ $navbar-bg: $dark-bg;
 
 // Footer Colors
 $footer-bg: $dark-bg;
+$footer-bg-lighter: lighten($dark-bg, 4%);
 $footer-primary: $dark-primary;
 $footer-secondary: $dark-secondary;
 

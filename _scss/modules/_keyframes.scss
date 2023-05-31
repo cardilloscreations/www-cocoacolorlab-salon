@@ -1,0 +1,17 @@
+/**
+ *  Keyframe Definitions
+ **/
+
+@keyframes bounceDownUp {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 1em;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}

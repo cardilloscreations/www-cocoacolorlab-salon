@@ -9,6 +9,10 @@ exclude: ["Gemfile", "CNAME", "LICENSE", "README.md", "AUTHORING.md"]
 sass:
   sass_dir: _scss
 
+# Collections
+collections:
+  - team_members
+
 # Information for deploy
 baseurl: ""
 
@@ -49,10 +53,15 @@ instagram: "https://www.instagram.com/CocoaColorLab.salon/"
 tiktok: "https://www.tiktok.com/@CocoaColorLab.salon"
 youtube: "https://www.youtube.com/@CocoaColorLabSalon"
 
+##
+## Global Images
+##
 facebook-image: "/images/icons/facebook.svg"
 instagram-image: "/images/icons/instagram.svg"
 tiktok-image: "/images/icons/tiktok.svg"
 youtube-image: "/images/icons/youtube.svg"
+linkedin-image: "/images/icons/linkedin.svg"
+email-image: "/images/icons/email.svg"
 
 ##
 ## About

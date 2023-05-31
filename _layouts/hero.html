@@ -5,13 +5,16 @@
 
 <body>
 
-  {%- include header/nav-bar.html activeHome=true -%}
+  {%- include header/nav-bar.html -%}
 
-  <div data-bs-spy="scroll" data-bs-target="#site-navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
- 
+  <div tabindex="0" data-bs-spy="scroll" data-bs-target="#site-navbar" data-bs-smooth-scroll="true"
+    data-bs-root-margin="0px 0px -30%">
+
     {%- include header/header-hero.html -%}
 
-    {{ content }}
+    <div class="container">
+      {{ content }}
+    </div>
 
     {%- include footer.html -%}
 

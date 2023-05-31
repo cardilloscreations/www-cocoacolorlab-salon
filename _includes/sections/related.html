@@ -1,28 +1,26 @@
 <section class="site-section related-section next-section-indicator" id="related">
-  <div class="container">
 
-    <div class="row text-center">
-      <header class="section-header">
-        <h2>{{ site.related-title }}</h2>
-        <hr class="normal">
-      </header>
-    </div>
-
-    {%- comment %} Related Grid {% endcomment -%}
-    <div class="row d-flex justify-content-center">
-      {% for item in site.related %}
-      {% capture item_title_text %}{{ item.title | strip_html | strip }}{% endcapture %}
-      <a class="text-decoration-none col-10 col-md-5 p-0 m-2" href="{{ item.url }}" aria-label="Link to {{ item_title_text }}">
-        <div class="card text-center p-0 m-0">
-          <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/images/related/{{ item.image }}" width="400" height="400" alt="{{ item_title_text }}">
-          <div class="card-body">
-            <h3 class="card-title">{{ item.title }}</h3>
-            <p class="card-text">{{ item.info }}</p>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-
+  <div class="row text-center">
+    <header class="section-header">
+      <h2>{{ site.related-title }}</h2>
+      <hr class="normal">
+    </header>
   </div>
+
+  {%- comment %} Related Grid {% endcomment -%}
+  <div class="row d-flex justify-content-center">
+    {% for item in site.related %}
+    {% capture item_title_text %}{{ item.title | strip_html | strip }}{% endcapture %}
+    <a class="text-decoration-none col-10 col-md-5 p-0 m-2" href="{{ item.url }}" aria-label="Link to {{ item_title_text }}">
+      <div class="card text-center p-0 m-0">
+        <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/images/related/{{ item.image }}" width="400" height="400" alt="{{ item_title_text }}">
+        <div class="card-body">
+          <h3 class="card-title">{{ item.title }}</h3>
+          <p class="card-text">{{ item.info }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
 </section>

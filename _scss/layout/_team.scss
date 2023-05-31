@@ -1,0 +1,55 @@
+/**
+ *  Team Section Style
+ **/
+
+section.site-section.team-section {
+    .card {
+        padding: 0;
+        margin: 1.5em;
+        box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px;
+        transition: all .3s ease-in-out;
+
+        @media (min-width: $mobile-break), (hover: hover) {
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.25) 2px 15px 30px;
+                transform: perspective(200px) translate3d(0, -2px, 2px);
+            }
+        }
+
+        .card-img-top {
+            width: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .card-body {
+            padding-top: 0.5em;
+
+            .card-title {
+
+                .member-name {
+                    text-align: start;
+                    font-weight: bold;
+                }
+
+                .member-title {
+                    text-align: start;
+                    font-style: italic;
+                }
+            }
+
+            img {
+                width: 1.75em;
+                height: 1.75em;
+                margin-left: 0.75em;
+                filter: opacity(0.65)
+            }
+        }
+
+        .card-text {
+            padding-top: 0.5em;
+            color: $light-secondary;
+            border-top: 1px solid $light-secondary;
+        }
+    }
+}

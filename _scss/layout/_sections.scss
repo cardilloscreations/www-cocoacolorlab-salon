@@ -1,16 +1,21 @@
 /**
- *  Sections Style
+ *  General Sections Style
  **/
- 
+
+// Default site section styling
 section.site-section {
-  padding-top: 3em;
+  padding-top: $section-margin;
   background: $section-bg;
   z-index: 1;
 
-  // Scroll offset for navbar
-  scroll-margin-top: 62px;
-  @media (min-width: 768px) {
-    scroll-margin-top: 110px;
+  // Scroll offset for navbar when collapsed
+  @media (max-width: $mobile-break) {
+    scroll-margin-top: $navbar-offset-collapsed;
+  }
+
+  // Scroll offset for navbar when expanded
+  @media (min-width: $mobile-break) {
+    scroll-margin-top: $navbar-offset-expanded;
   }
 
   // Section Header
@@ -33,6 +38,7 @@ section.site-section {
       font-weight: bold;
       font-style: italic;
     }
+
     blockquote {
       font-size: 1.25em;
     }
