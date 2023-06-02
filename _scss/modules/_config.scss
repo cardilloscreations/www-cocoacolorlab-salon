@@ -22,6 +22,9 @@ $section-margin: 2.5em;
 $navbar-offset-collapsed: 70px;
 $navbar-offset-expanded: 110px;
 
+$arrow-down-height: 2.5em;
+$heading-content-offset: 5em;
+
 @mixin hero-height() {
     @media (max-width: $mobile-break) {
         height: calc(100vh - #{$navbar-offset-collapsed});
