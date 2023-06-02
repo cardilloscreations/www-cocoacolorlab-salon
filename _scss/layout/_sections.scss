@@ -7,6 +7,7 @@ section.site-section {
   padding-top: $section-margin;
   background: $section-bg;
   z-index: 1;
+  content-visibility: auto;
 
   // Scroll offset for navbar when collapsed
   @media (max-width: $mobile-break) {

@@ -8,7 +8,8 @@ section.site-section.team-section {
         margin: 1.5em;
         box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px;
         transition: all .3s ease-in-out;
-
+        content-visibility: auto;
+        
         @media (min-width: $mobile-break), (hover: hover) {
             &:hover {
                 box-shadow: rgba(0, 0, 0, 0.25) 2px 15px 30px;
