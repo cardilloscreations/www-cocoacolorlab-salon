@@ -3,16 +3,20 @@
  **/
 
 section.site-section.team-section {
+    header.section-header {
+        margin-bottom: 0;
+    }
+
     .card {
         padding: 0;
         margin: 1.5em;
-        box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px;
+        box-shadow: rgba(0, 0, 0, 0.12) 2px 5px 10px;
         transition: all .3s ease-in-out;
         content-visibility: auto;
         
         @media (min-width: $mobile-break), (hover: hover) {
             &:hover {
-                box-shadow: rgba(0, 0, 0, 0.25) 2px 15px 30px;
+                box-shadow: rgba(0, 0, 0, 0.24) 2px 7px 14px;
                 transform: perspective(200px) translate3d(0, -2px, 2px);
             }
         }

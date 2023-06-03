@@ -1,0 +1,48 @@
+<section class="site-section team-section next-section-indicator" id="team-others">
+    <header class="section-header">
+        <h3>Our Team Members</h2>
+    </header>
+    <div class="section-content">
+        <div class="row d-flex justify-content-center">
+            {% for team_member in site.team_others %}
+            <div class="card text-center col-10 col-md-5">
+                <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/images/team/{{ team_member.image }}" width="400" height="400" alt="{{ team_member.name }}">
+                <div class="card-body">
+                    <div class="card-title">
+                        <div class="d-flex flex-row align-self-center">
+                            <div class="flex-grow-1">
+                                <h4 class="member-name">
+                                    {{- team_member.name -}}
+                                </h4>
+                            </div>
+                            <div class="d-flex flex-row flex-grow-0 justify-content-end">
+                                {%- if team_member.email %}
+                                <a href="mailto:{{ team_member.email }}" aria-label="{{ team_member.name }} - Email" target="_blank">
+                                    <img src="{{ site.baseurl | append: site.email-image }}" alt="{{ team_member.name }} - Email" height="100" width="100">
+                                </a>
+                                {% endif -%}
+                                {%- if team_member.instagram %}
+                                <a href="{{ team_member.instagram }}" aria-label="{{ team_member.name }} - Instagram" target="_blank">
+                                    <img src="{{ site.baseurl | append: site.instagram-image }}" alt="{{ team_member.name }} - Instagram" height="100" width="100">
+                                </a>
+                                {% endif -%}
+                                {%- if team_member.linkedin %}
+                                <a href="{{ team_member.linkedin }}" aria-label="{{ team_member.name }} - LinkedIn" target="_blank">
+                                    <img src="{{ site.baseurl | append: site.linkedin-image }}" alt="{{ team_member.name }} - LinkedIn" height="100" width="100">
+                                </a>
+                                {% endif -%}
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-self-center">
+                            <h6 class="member-title">
+                                {{- team_member.title -}}
+                            </h6>
+                        </div>
+                    </div>
+                    <p class="card-text">{{ team_member.content }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

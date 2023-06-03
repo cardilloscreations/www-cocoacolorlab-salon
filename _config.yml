@@ -10,8 +10,14 @@ sass:
   sass_dir: _scss
 
 # Collections
+collections_dir: _collections
 collections:
-  - team_members
+  team_owners:
+    sort_by: order
+    member_type: owner
+  team_others:
+    sort_by: order
+    member_type: other
 
 # Information for deploy
 baseurl: ""

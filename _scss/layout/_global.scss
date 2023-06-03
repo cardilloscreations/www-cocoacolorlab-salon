@@ -74,13 +74,14 @@ hr {
 
 // Links
 a {
-  color: $light-primary;
+  color: $light-link-color;
   text-decoration: none;
   transition: all $transition-links $transition-links-type;
 
   &:hover,
   &:active {
-    color: lighten($light-primary, 20%);
+    color: darken($light-link-color, 10%);
+    font-weight: bold;
   }
 }
 
