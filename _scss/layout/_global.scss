@@ -3,16 +3,17 @@
  **/
 
 body {
-
   color: $light-primary;
   background-color: $light-bg;
 
   // Typography
   font: {
-    family: $font-family, Arial, sans-serif;
+    family: Verdana, Tahoma, Arial, sans-serif;
     size: $global-font-size;
     weight: normal;
   }
+  //letter-spacing: 1px;
+  word-spacing: -1px;
 
   .thin {
     font-weight: 300;
