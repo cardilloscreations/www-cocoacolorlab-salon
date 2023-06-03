@@ -6,24 +6,28 @@
     {% include header/hero-image.html %}
 
     <div class="heading-content bg-transparent-black rounded-3">
-
       {%- comment %} Heading Title {% endcomment -%}
       <div class="heading-title">
-        <h1 class="my-2">{{ site.header-title }}</h1>
+        <h1 >{{ site.header-title }}</h1>
         <hr class="small">
-        <h2 class="thin my-2">{{ site.header-tagline1 }}</h2>
-        <h2 class="thin my-2">{{ site.header-tagline2 }}</h2>
+        <div class="heading-tagline">
+          <h4>{{ site.header-tagline1 }}</h4>
+          <h4>{{ site.header-tagline2 }}</h4>  
+        </div>
       </div>
-
-      {%- comment -%} TODO
       {%- comment %} Header Buttons {% endcomment -%}
-      <div class="buttons-header">
-        <div class="col-lg-3 col-lg-push-3 col-md-4 col-md-push-2 col-sm-8 col-sm-push-2 col-10 col-push-1"><a href="{{ site.header-focus-button.url }}" class="button-cta button-focus">{{
-            site.header-focus-button.title }}</a></div>
-        <div class="col-lg-3 col-lg-push-3 col-md-4 col-md-push-2 col-sm-8 col-sm-push-2 col-10 col-push-1"><a href="{{ site.header-secondary-button.url }}" class="button-cta">{{ site.header-secondary-button.title
-            }}</a></div>
+      <div class="heading-buttons d-grid gap-2 col-auto justify-content-center">
+        <button class="btn btn-light text-nowrap" type="button">
+          <a href="tel:+1-321-621-4247">
+            CALL 1-321-621-HAIR
+          </a>
+        </button>
+        <button class="btn btn-light text-nowrap" type="button" data-container="body" data-bs-toggle="modal" data-bs-target="#bookingModal">
+          <a href="#">
+            BOOK ONLINE
+          </a>          
+        </button>                
       </div>
-      {%- endcomment -%}
     </div>
 
   </div>
@@ -38,3 +42,18 @@
   </div>
 
 </header>
+
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        Booking Feature Coming Soon!!
+      </div>
+      <div class="modal-footer">
+        <div class="container-fluid text-center">
+          <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal" >OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

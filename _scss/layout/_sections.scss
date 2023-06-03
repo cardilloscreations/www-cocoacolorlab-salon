@@ -6,7 +6,6 @@
 section.site-section {
   padding-top: $section-margin;
   background: $section-bg;
-  z-index: 1;
   content-visibility: auto;
 
   // Scroll offset for navbar when collapsed
@@ -38,13 +37,15 @@ section.site-section {
 
   .section-content {
     .lead {
-      font-size: 1.55em;
+      font-size: 1.25em;
       font-weight: bold;
       font-style: italic;
     }
 
     blockquote {
-      font-size: 1.25em;
+      font-size: 1.15em;
+      text-align: justify;
+      text-align-last: center;
     }
   }
 

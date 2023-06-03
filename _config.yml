@@ -70,50 +70,31 @@ linkedin-image: "/images/icons/linkedin.svg"
 email-image: "/images/icons/email.svg"
 
 ##
-## About
-##
-about-title: About Us
-about-description-short: Striving to be the best in Cocoa, FL.
-about-description-long: >
-  Lisa Cardillo is a master hair stylist and colorist who is licensed in New York, Maryland, and Florida.
-  She currently owns and operates <a href="https://toughlove.salon">Tough Love Salon</a> in Severna Park, MD.
-  This website is for the new salon that she is opening in Cocoa, FL alongside her husband at the <a href="https://cocoacolorlab.com">Cocoa Color Lab</a>.
-
-##
-## Services
-##
-services-title: Services
-services-description-short: Services provided at our salon.
-services-description-long: >
-  Our salon is designed to provide a modern upscale atmosphere with premium equipment and brands that are optimal for colorists and our clients.
-  Aside from hair cuts and coloring, specialty services will include color correction, highlighting, blonding, balayage, ombre, and keratin straightening.
-
-##
 ## Related
 ##
 related-title: Related Sites
 
 related:
   # Salon
-  - title: <span title="CocoaColorLab.Salon">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.S<span class="thin">alon</span></span>
+  - title: <span title="CocoaColorLab.Salon"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>S</b>alon</span>
     categories: [Lisa]
     image: colorlab-salon-related-image.svg
     info: Lisa's hair salon services (this site)
     url: "https://cocoacolorlab.salon"
   # Com
-  - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.C<span class="thin">om</span></span>
+  - title: <span title="CocoaColorLab.Art"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>C</b>om</span>
     categories: [Lisa,Ray]
     image: colorlab-com-related-image.svg
     info: Main company website
     url: "https://cocoacolorlab.com"
   # Ink
-  - title: <span title="CocoaColorLab.Ink">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.I<span class="thin">nk</span></span>
+  - title: <span title="CocoaColorLab.Ink"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>I</b>nk</span>
     categories: [Ray]
     image: colorlab-ink-related-image.svg
     info: Ray's tattoo services
     url: "https://cocoacolorlab.ink"
   # Art
-  - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.A<span class="thin">rt</span></span>
+  - title: <span title="CocoaColorLab.Art"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>A</b>rt</span>
     categories: [Ray]
     image: colorlab-art-related-image.svg
     info: Ray's art portfolio

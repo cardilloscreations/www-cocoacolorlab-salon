@@ -8,16 +8,12 @@ body {
 
   // Typography
   font: {
-    family: Verdana, Tahoma, Arial, sans-serif;
-    size: $global-font-size;
+    family: Verdana, Arial, sans-serif;
     weight: normal;
   }
   //letter-spacing: 1px;
   word-spacing: -1px;
-
-  .thin {
-    font-weight: 300;
-  }
+  -webkit-font-smoothing: antialiased;
 }
 
 // Paragraphs

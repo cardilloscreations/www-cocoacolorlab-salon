@@ -19,15 +19,16 @@ header.site-header {
       left: 50%;
       width: 80%;
       max-width: 42em;
+      padding: 2em;
       text-transform: uppercase;
       text-align: center;
       transform: translate(-50%, calc(-50% - #{$heading-content-offset}));
 
       .heading-title {
-        padding: 0.5em;
-        h1, h2, h3 {
-          padding: 0.1em;
+        h1 {
+          font-weight: bold;
         }
+
         hr.small {
           margin: 1.0em auto;
           opacity: 0.75;
@@ -35,11 +36,11 @@ header.site-header {
         }
       }
 
-      .buttons-header {
-        margin-top: 40px;
-
-        .button-cta {
-          width: 100%;
+      .heading-buttons {
+        margin-top: 2em;
+        button {
+          padding-left: 1.5em;
+          padding-right: 1.5em;
         }
       }
     }
