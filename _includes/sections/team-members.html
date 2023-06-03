@@ -1,21 +1,21 @@
-<section class="site-section team-section next-section-indicator" id="team-others">
+<section class="site-section team-section" id="team-owners">
     <header class="section-header">
-        <h3>Our Team Members</h2>
+        <h2>{{- include.title -}}</h2>
     </header>
     <div class="section-content">
         <div class="row d-flex justify-content-center">
-            {% for team_member in site.team_others %}
-            <div class="card text-center col-10 col-md-5">
-                <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/images/team/{{ team_member.image }}" width="400" height="400" alt="{{ team_member.name }}">
+            {% for team_member in include.members %}
+            <div class="card text-center col-11 col-md-5">
+                <img class="card-img-top" src="{{ site.baseurl }}/images/team/{{ team_member.image }}" width="400" height="400" alt="{{ team_member.name }}">
                 <div class="card-body">
                     <div class="card-title">
                         <div class="d-flex flex-row align-self-center">
                             <div class="flex-grow-1">
-                                <h4 class="member-name">
+                                <p class="member-name">
                                     {{- team_member.name -}}
-                                </h4>
+                                </p>
                             </div>
-                            <div class="d-flex flex-row flex-grow-0 justify-content-end">
+                            <div class="d-flex flex-row flex-grow-0 justify-content-end align-self-center">
                                 {%- if team_member.email %}
                                 <a href="mailto:{{ team_member.email }}" aria-label="{{ team_member.name }} - Email" target="_blank">
                                     <img src="{{ site.baseurl | append: site.email-image }}" alt="{{ team_member.name }} - Email" height="100" width="100">
@@ -34,9 +34,9 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row align-self-center">
-                            <h6 class="member-title">
+                            <p class="member-title">
                                 {{- team_member.title -}}
-                            </h6>
+                            </p>
                         </div>
                     </div>
                     <p class="card-text">{{ team_member.content }}</p>

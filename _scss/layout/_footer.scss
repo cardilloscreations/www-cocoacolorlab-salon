@@ -10,6 +10,7 @@ footer.site-footer {
   margin-top: $section-margin;
   text-align: center;
   content-visibility: auto;
+  contain-intrinsic-height: 222px;
 
   // Footer Information Section
   .footer-info {
@@ -47,6 +48,9 @@ footer.site-footer {
         &:active {
           color: $footer-secondary;
         }
+      }
+      p {
+        margin-bottom: 0.75em;
       }
     }
   }

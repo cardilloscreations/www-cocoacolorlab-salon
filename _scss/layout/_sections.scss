@@ -51,30 +51,6 @@ section.site-section {
   // Section Focus
   &.section-focus {
     background-color: $section-focus;
-
-    &.next-section-indicator:after {
-      border-top-color: $section-focus;
-    }
-  }
-
-  // Next Section Indicator
-  &.next-section-indicator {
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 0;
-      bottom: -30px;
-      left: 50%;
-      z-index: 3;
-      transform: translate(-50%);
-      border-left: 30px solid transparent;
-      border-right: 30px solid transparent;
-      border-top: 30px solid $light-bg;
-    }
-
   }
 
 }

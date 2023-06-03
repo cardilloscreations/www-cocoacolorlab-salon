@@ -12,7 +12,6 @@ section.site-section.team-section {
         margin: 1.5em;
         box-shadow: rgba(0, 0, 0, 0.12) 2px 5px 10px;
         transition: all .3s ease-in-out;
-        content-visibility: auto;
         
         @media (min-width: $mobile-break), (hover: hover) {
             &:hover {
@@ -35,11 +34,13 @@ section.site-section.team-section {
                 .member-name {
                     text-align: start;
                     font-weight: bold;
+                    font-size: 1.4em;
                 }
 
                 .member-title {
                     text-align: start;
                     font-style: italic;
+                    font-size: 1.1em;
                 }
             }
 

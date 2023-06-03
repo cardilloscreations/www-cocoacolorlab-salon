@@ -4,7 +4,7 @@ title: Our Team
 description: Learn more about our owners and our amazing team of professional stylists, artists, and support staff.
 ---
 
-<section class="site-section team-section next-section-indicator text-center" id="our-team">
+<section class="site-section team-section text-center" id="our-team">
     <div class="d-flex-row mb-3">
         Learn more about our talented team of professional cosmetologists and support staff below.
     </div>
@@ -13,5 +13,5 @@ description: Learn more about our owners and our amazing team of professional st
     </div>
 </section>
 
-{% include sections/team-owners.html %}
-{% include sections/team-others.html %}
+{% include sections/team-members.html title="Meet The Owners" members=site.team_owners %}
+{% include sections/team-members.html title="Our Team Members" members=site.team_others %}
