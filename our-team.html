@@ -5,6 +5,7 @@ description: Learn more about our owners and our amazing team of professional st
 ---
 
 <section class="site-section team-section text-center" id="our-team">
+    <h2 class="visually-hidden">Our Team Intro</h2>
     <div class="d-flex-row mb-3">
         Learn more about our talented team of professional cosmetologists and support staff below.
     </div>
@@ -13,5 +14,5 @@ description: Learn more about our owners and our amazing team of professional st
     </div>
 </section>
 
-{% include sections/team-members.html title="Meet The Owners" members=site.team_owners %}
-{% include sections/team-members.html title="Our Team Members" members=site.team_others %}
+{% include sections/team-members.html id="team-owners" title="Meet The Owners" members=site.team_owners %}
+{% include sections/team-members.html id="team-others" title="Our Team Members" members=site.team_others %}

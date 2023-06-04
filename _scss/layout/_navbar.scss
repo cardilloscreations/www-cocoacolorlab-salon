@@ -14,4 +14,12 @@ nav.navbar {
         }
     }
 
+    .dropdown-item {
+
+        &.active,
+        &:active {
+            color: $white;
+            background-color: transparentize($color: $white, $amount: 0.80);
+        }
+    }
 }

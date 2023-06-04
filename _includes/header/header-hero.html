@@ -11,21 +11,17 @@
         <h1 >{{ site.header-title }}</h1>
         <hr class="small">
         <div class="heading-tagline">
-          <h4>{{ site.header-tagline1 }}</h4>
-          <h4>{{ site.header-tagline2 }}</h4>  
+          <span class="h4">{{ site.header-tagline1 }}</span>
+          <span class="h4">{{ site.header-tagline2 }}</span>  
         </div>
       </div>
       {%- comment %} Header Buttons {% endcomment -%}
       <div class="heading-buttons d-grid gap-2 col-auto justify-content-center">
-        <button class="btn btn-light text-nowrap" type="button">
-          <a href="tel:+1-321-621-4247">
-            CALL 1-321-621-HAIR
-          </a>
-        </button>
+        <a class="btn btn-light text-nowrap" href="tel:+1-321-621-4247">
+          CALL 1-321-621-HAIR
+        </a>
         <button class="btn btn-light text-nowrap" type="button" data-container="body" data-bs-toggle="modal" data-bs-target="#bookingModal">
-          <a href="#">
-            BOOK ONLINE
-          </a>          
+          BOOK ONLINE
         </button>                
       </div>
     </div>
