@@ -9,9 +9,13 @@ exclude: ["Gemfile", "CNAME", "LICENSE", "README.md", "AUTHORING.md"]
 sass:
   sass_dir: _scss
 
+# TODO: Convert to Jekyll v4, use custom action, and use collection "sort" instead.
+# SEE: https://github.com/github/pages-gem/issues/651#issuecomment-1197448026
 # Collections
 collections_dir: _collections
 collections:
+  related_sites:
+    sort_by: order
   team_owners:
     sort_by: order
     member_type: owner
@@ -68,37 +72,6 @@ tiktok-image: "/images/icons/tiktok.svg"
 youtube-image: "/images/icons/youtube.svg"
 linkedin-image: "/images/icons/linkedin.svg"
 email-image: "/images/icons/email.svg"
-
-##
-## Related
-##
-related-title: Related Sites
-
-related:
-  # Salon
-  - title: <span title="CocoaColorLab.Salon"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>S</b>alon</span>
-    categories: [Lisa]
-    image: colorlab-salon-related-image.svg
-    info: Lisa's hair salon services (this site)
-    url: "https://cocoacolorlab.salon"
-  # Com
-  - title: <span title="CocoaColorLab.Art"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>C</b>om</span>
-    categories: [Lisa,Ray]
-    image: colorlab-com-related-image.svg
-    info: Main company website
-    url: "https://cocoacolorlab.com"
-  # Ink
-  - title: <span title="CocoaColorLab.Ink"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>I</b>nk</span>
-    categories: [Ray]
-    image: colorlab-ink-related-image.svg
-    info: Ray's tattoo services
-    url: "https://cocoacolorlab.ink"
-  # Art
-  - title: <span title="CocoaColorLab.Art"><b>C</b>ocoa<b>C</b>olor<b>L</b>ab.<b>A</b>rt</span>
-    categories: [Ray]
-    image: colorlab-art-related-image.svg
-    info: Ray's art portfolio
-    url: "https://cocoacolorlab.art"
 
 ##
 ## Footer

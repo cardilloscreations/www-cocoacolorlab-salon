@@ -3,19 +3,21 @@
 # only Main files contain this front matter, not partials.
 ---
 
-// Modules
-@import "modules/_config",
-        "modules/_keyframes",
-        "modules/_color-skin";
+// Base
+@import "base/_config",
+        "base/_keyframes",
+        "base/_color-skin";
 
 // Components
-@import "components/_social-icons";
+@import "components/_navbar",
+        "components/_social-icons";
 
- // Layout
- @import "layout/_global",
-         "layout/_navbar",
-         "layout/_header",
-         "layout/_sections",
-         "layout/_related",
-         "layout/_team",
-         "layout/_footer";
+// Layout
+@import "layout/_global",
+        "layout/_header",
+        "layout/_sections",
+        "layout/_footer";
+
+// Pages
+@import "pages/_related",
+        "pages/_team";

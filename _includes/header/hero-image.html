@@ -1,5 +1,5 @@
 <picture>
-    <source media="(orientation: landscape)" srcset="{{ site.baseurl }}/images/header-image.land.webp">
-    <source media="(orientation: portrait)" srcset="{{ site.baseurl }}/images/header-image.port.webp">
-    <img class="hero-image" src="{{ site.baseurl }}/images/header-image.land.webp" alt="{{ site.header-title }}">
+    <source media="all and (orientation:landscape)" srcset="{{ site.baseurl }}/images/header-image.land.webp">
+    <source media="all and (orientation:portrait)" srcset="{{ site.baseurl }}/images/header-image.port.webp">
+    <img src="{{ site.baseurl }}/images/header-image.land.webp" width="100vw" alt="{{ site.header-title }}">
 </picture>

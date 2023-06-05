@@ -16,24 +16,25 @@
   {%- endif -%}
   {%- endcapture -%}
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   {%- comment %} Warm up references with Pre-Connect {% endcomment -%}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com">
 
-  {%- comment %} General Metadata {% endcomment -%}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page_title }}</title>
-  <meta name="title" content="{{ page_title }}">
-  <meta name="description" content="{{ page_description }}">
+  {%- comment %} Preload the stylesheets to maybe get a minor jumpstart {% endcomment -%}
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" as="style" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" as="script" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preload" href="{{ site.baseurl }}/css/style.css" as="style">
 
   {%- comment %} Preload the hero image (must be after viewport for media query) {% endcomment -%}
   {%- if include.preloadHero == true %}
-  <link rel="preload" media="(orientation: landscape)" href="{{ site.baseurl }}/images/header-image.land.webp" as="image" fetchpriority="high">
-  <link rel="preload" media="(orientation: portrait)" href="{{ site.baseurl }}/images/header-image.port.webp" as="image" fetchpriority="high">
+  <link rel="preload" media="all and (orientation:landscape)" href="{{ site.baseurl }}/images/header-image.land.webp" as="image" fetchpriority="high">
+  <link rel="preload" media="all and (orientation:portrait)" href="{{ site.baseurl }}/images/header-image.port.webp" as="image" fetchpriority="high">
   {% endif -%}
 
-  {%- comment %} Preload the any icon images {% endcomment -%}
+  {%- comment %} Preload the social media icons that are shown on the footer {% endcomment -%}
   <link rel="preload" href="{{ site.baseurl | append: site.facebook-image }}" as="image">
   <link rel="preload" href="{{ site.baseurl | append: site.instagram-image }}" as="image">
   <link rel="preload" href="{{ site.baseurl | append: site.tiktok-image }}" as="image">
@@ -45,9 +46,16 @@
   {%- comment %} Site Styles {% endcomment -%}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 
+  {%- comment %} General Page Metadata {% endcomment -%}
+  <title>{{ page_title }}</title>
+  <meta name="title" content="{{ page_title }}">
+  <meta name="description" content="{{ page_description }}">
   {%- if page.image -%}
   <link rel="image_src" href="{{ page.image }}">
   {%- endif -%}
+
+  {%- comment %} Canoncial URL needed for crawlers (e.g., "/" vs "index.html") {% endcomment -%}
+  <link rel="canonical" href="{{ abs_page_url }}">
 
   {%- comment %} Geo Location Meta {% endcomment -%}
   <meta name="DC.title" content="{{ page_title }}">
@@ -96,8 +104,5 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=2023.05.08.21">
   <meta name="theme-color" content="#ffffff">
-
-  {%- comment %} Canoncial URL needed when crawling variants (e.g., root vs index.html) {% endcomment -%}
-  <link rel="canonical" href="{{ abs_page_url }}">
 
 </head>

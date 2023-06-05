@@ -1,18 +1,20 @@
-<section class="site-section related-section text-center" id="related">
+<section class="site-section related-section text-center" id="related-sites">
   <header class="section-header">
-    <h2>{{ site.related-title }}</h2>
+    <h2>Related Sites</h2>
   </header>
   <div class="section-content">
     {%- comment %} Related Grid {% endcomment -%}
     <div class="row d-flex justify-content-center">
-      {%- for item in site.related -%}
-      {%- capture item_title_text %}{{ item.title | strip_html | strip }}{% endcapture -%}
-      <a class="text-decoration-none col-10 col-md-5 p-0 m-2" href="{{ item.url }}" aria-label="Link to {{ item_title_text }}">
+      {%- comment %} TODO: Convert to Jekyll v4 and use the collections sort instead of this one. {% endcomment -%}
+      {%- assign related_sites_sorted = site.related_sites | sort: "order" -%}
+      {%- for related_site in related_sites_sorted -%}
+      {%- capture related_site_title_text %}{{ related_site.title | strip_html | strip }}{% endcapture -%}
+      <a class="text-decoration-none col-10 col-md-5 p-0 m-2" href="{{ related_site.related_url }}" aria-label="Link to {{ related_site_title_text }}">
         <div class="card text-center p-0 m-0">
-          <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/images/related/{{ item.image }}" width="400" height="400" alt="{{ item_title_text }}">
+          <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/images/related/{{ related_site.image }}" width="400" height="400" alt="{{ related_site_title_text }}">
           <div class="card-body">
-            <h3 class="card-title">{{ item.title }}</h3>
-            <p class="card-text">{{ item.info }}</p>
+            <span class="card-title h4">{{ related_site.title }}</span>
+            <p class="card-text">{{ related_site.content }}</p>
           </div>
         </div>
       </a>

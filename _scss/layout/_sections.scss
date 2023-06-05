@@ -4,7 +4,7 @@
 
 // Default site section styling
 section.site-section {
-  padding-top: $section-margin;
+  padding: $section-top-space $section-side-space 0;
   background: $section-bg;
   content-visibility: auto;
 

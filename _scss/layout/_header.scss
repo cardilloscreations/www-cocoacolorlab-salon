@@ -38,6 +38,7 @@ header.site-header {
 
       .heading-buttons {
         margin-top: 2em;
+
         button {
           padding-left: 1.5em;
           padding-right: 1.5em;
@@ -45,27 +46,39 @@ header.site-header {
       }
     }
 
-    .hero-image {
-      width: 100vw;
-      margin: 0;
-      padding: 0;
-      object-fit: cover;
+    picture {
+      img {
+        width: 100vw;
+        max-height: 100vh;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+      }
     }
+
   }
 
   &.hero-header {
     @include hero-height();
 
-    .hero-image {
+    picture {
       @include hero-height();
+
+      img {
+        @include hero-height();
+      }
     }
   }
 
   &.slim-header {
     height: 8em;
 
-    .hero-image {
+    picture {
       height: 8em;
+
+      img {
+        height: 8em;
+      }
     }
 
     .heading-content {
