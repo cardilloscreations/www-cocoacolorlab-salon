@@ -17,21 +17,22 @@
   {%- endcapture -%}
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
   {%- comment %} Warm up references with Pre-Connect {% endcomment -%}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com">
 
   {%- comment %} Preload the stylesheets to maybe get a minor jumpstart {% endcomment -%}
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" as="style" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" as="script" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="preload" href="{{ site.baseurl }}/css/style.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" as="style" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" fetchpriority="high">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" as="script" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer" fetchpriority="high">
+  <link rel="preload" href="{{ site.baseurl }}/css/style.css" as="style" fetchpriority="high">
 
   {%- comment %} Preload the hero image (must be after viewport for media query) {% endcomment -%}
   {%- if include.preloadHero == true %}
-  <link rel="preload" media="all and (orientation:landscape)" href="{{ site.baseurl }}/images/header-image.land.webp" as="image" fetchpriority="high">
-  <link rel="preload" media="all and (orientation:portrait)" href="{{ site.baseurl }}/images/header-image.port.webp" as="image" fetchpriority="high">
+  <link rel="preload" media="(orientation:landscape)" href="{{ site.baseurl }}/images/header-image.land.webp" as="image" fetchpriority="high">
+  <link rel="preload" media="(orientation:portrait) and (max-width: 767.98px)" href="{{ site.baseurl }}/images/header-image.port.sm.webp" as="image" fetchpriority="high">
+  <link rel="preload" media="(orientation:portrait) and (min-width: 768px)" href="{{ site.baseurl }}/images/header-image.port.md.webp" as="image" fetchpriority="high">
   {% endif -%}
 
   {%- comment %} Preload the social media icons that are shown on the footer {% endcomment -%}
