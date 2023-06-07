@@ -19,33 +19,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
+  {%- comment %} Preload the hero image ASAP (must be after viewport for media query) {% endcomment -%}
+  {%- if include.preloadHero == true %}
+  <link rel="preload" media="(orientation:landscape)" href="{{ site.baseurl }}/images/header-image.land.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" media="(orientation:portrait) and (max-width: 767.98px)" href="{{ site.baseurl }}/images/header-image.port.sm.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" media="(orientation:portrait) and (min-width: 768px)" href="{{ site.baseurl }}/images/header-image.port.md.webp" as="image" type="image/webp" fetchpriority="high">
+  {% endif -%}
+
   {%- comment %} Warm up references with Pre-Connect {% endcomment -%}
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com">
 
   {%- comment %} Preload the stylesheets to maybe get a minor jumpstart {% endcomment -%}
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" as="style" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" fetchpriority="high">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" as="script" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer" fetchpriority="high">
-  <link rel="preload" href="{{ site.baseurl }}/css/style.css" as="style" fetchpriority="high">
+  <link rel="preload" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preload" type="text/css" href="{{ site.baseurl }}/css/style.css">
 
-  {%- comment %} Preload the hero image (must be after viewport for media query) {% endcomment -%}
-  {%- if include.preloadHero == true %}
-  <link rel="preload" media="(orientation:landscape)" href="{{ site.baseurl }}/images/header-image.land.webp" as="image" fetchpriority="high">
-  <link rel="preload" media="(orientation:portrait) and (max-width: 767.98px)" href="{{ site.baseurl }}/images/header-image.port.sm.webp" as="image" fetchpriority="high">
-  <link rel="preload" media="(orientation:portrait) and (min-width: 768px)" href="{{ site.baseurl }}/images/header-image.port.md.webp" as="image" fetchpriority="high">
-  {% endif -%}
-
-  {%- comment %} Preload the social media icons that are shown on the footer {% endcomment -%}
-  <link rel="preload" href="{{ site.baseurl | append: site.facebook-image }}" as="image">
-  <link rel="preload" href="{{ site.baseurl | append: site.instagram-image }}" as="image">
-  <link rel="preload" href="{{ site.baseurl | append: site.tiktok-image }}" as="image">
-  <link rel="preload" href="{{ site.baseurl | append: site.youtube-image }}" as="image">
-
-  {%- comment %} 3rd Party Styles {% endcomment -%}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-  {%- comment %} Site Styles {% endcomment -%}
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  {%- comment %} Load the stylesheets {% endcomment -%}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
 
   {%- comment %} General Page Metadata {% endcomment -%}
   <title>{{ page_title }}</title>
@@ -95,13 +86,13 @@
   {%- endif -%}
 
   {%- comment %} see: https://realfavicongenerator.net/ {% endcomment -%}
-  <link rel="icon" sizes="any" type="image/svg+xml" href="/images/favicon/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=2023.05.08.21">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=2023.05.08.21">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=2023.05.08.21">
-  <link rel="manifest" href="/images/favicon/site.webmanifest?v=2023.05.08.21">
-  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=2023.05.08.21" color="#5bbad5">
-  <link rel="shortcut icon" href="/images/favicon/favicon.ico?v=2023.05.08.21">
+  <link rel="icon" sizes="any" type="image/svg+xml" fetchpriority="low" href="/images/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" fetchpriority="low" href="/images/favicon/apple-touch-icon.png?v=2023.05.08.21">
+  <link rel="icon" type="image/png" sizes="32x32" fetchpriority="low" href="/images/favicon/favicon-32x32.png?v=2023.05.08.21">
+  <link rel="icon" type="image/png" sizes="16x16" fetchpriority="low" href="/images/favicon/favicon-16x16.png?v=2023.05.08.21">
+  <link rel="manifest" fetchpriority="low" href="/images/favicon/site.webmanifest?v=2023.05.08.21">
+  <link rel="mask-icon" fetchpriority="low" href="/images/favicon/safari-pinned-tab.svg?v=2023.05.08.21" color="#5bbad5">
+  <link rel="shortcut icon" fetchpriority="low" href="/images/favicon/favicon.ico?v=2023.05.08.21">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=2023.05.08.21">
   <meta name="theme-color" content="#ffffff">
