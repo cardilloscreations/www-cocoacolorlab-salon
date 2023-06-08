@@ -15,9 +15,9 @@ $light-secondary: #595959;
 $light-link-color: #3030B0;
 
 // Dark Color Scheme Areas
-$dark-bg: #232323;
-$dark-primary: #ADADAD;
-$dark-secondary: #E1E1E1;
+$dark-bg: #222222;
+$dark-primary: #BBBBBB;
+$dark-secondary: #E0E0E0;
 
 // Sections Colors
 $section-bg: $white;
@@ -27,7 +27,7 @@ $section-focus: $light-blue;
 $navbar-bg: $dark-bg;
 
 // Footer Colors
-$footer-bg: $dark-bg;
+$footer-bg-darker: $dark-bg;
 $footer-bg-lighter: lighten($dark-bg, 4%);
 $footer-primary: $dark-primary;
 $footer-secondary: $dark-secondary;
