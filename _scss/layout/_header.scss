@@ -46,16 +46,13 @@ header.site-header {
       }
     }
 
-    picture {
-      img {
-        width: 100vw;
-        max-height: 100vh;
-        margin: 0;
-        padding: 0;
-        object-fit: cover;
-      }
+    img {
+      width: 100vw;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
     }
-
   }
 
   &.hero-header {
@@ -66,19 +63,17 @@ header.site-header {
 
       img {
         @include hero-height();
-      }
+      }  
     }
   }
 
   &.slim-header {
     height: 8em;
+    object-fit: cover;
+    object-position: center top;
 
-    picture {
+    img {
       height: 8em;
-
-      img {
-        height: 8em;
-      }
     }
 
     .heading-content {

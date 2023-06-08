@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
 
-{%- include head.html preloadHero=true -%}
+{%- capture preloadLines -%}
+<link rel="preload" href="{{ site.baseurl }}/images/header-image.slim.webp" as="image" type="image/webp" fetchpriority="high">
+{%- endcapture -%} 
+{%- include head.html preloadLines=preloadLines -%}
 
 <body>
 
