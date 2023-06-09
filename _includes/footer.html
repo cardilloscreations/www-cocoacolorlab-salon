@@ -10,16 +10,16 @@
       <div class="social-icons">
         <ul class="icons">
           <li><a href="{{ site.facebook }}" aria-label="Facebook" target="_blank">
-              <img src="{{ site.baseurl | append: site.facebook-image }}" alt="Facebook" height="100" width="100">
+              <img src="{% link {{ site.facebook-image }} %}" alt="Facebook" height="100" width="100">
             </a></li>
           <li><a href="{{ site.instagram }}" aria-label="Instagram" target="_blank">
-              <img src="{{ site.baseurl | append: site.instagram-image }}" alt="Instagram" height="100" width="100">
+              <img src="{% link {{ site.instagram-image }} %}" alt="Instagram" height="100" width="100">
             </a></li>
           <li><a href="{{ site.tiktok }}" aria-label="TikTok" target="_blank">
-              <img src="{{ site.baseurl | append: site.tiktok-image }}" alt="TikTok" height="100" width="100">
+              <img src="{% link {{ site.tiktok-image }} %}" alt="TikTok" height="100" width="100">
             </a></li>
           <li><a href="{{ site.youtube }}" aria-label="YouTube" target="_blank">
-              <img src="{{ site.baseurl | append: site.youtube-image }}" alt="YouTube" height="100" width="100">
+              <img src="{% link {{ site.youtube-image }} %}" alt="YouTube" height="100" width="100">
             </a></li>
         </ul>
       </div>
@@ -33,11 +33,11 @@
             Call Us @ (321) 621-HAIR
           </a>
           <span class="d-none d-sm-block px-3 fw-semibold" aria-disabled="true">|</span>
-          <a class="pb-1 pb-sm-0" href="{{ site.baseurl }}/legal/privacy">
+          <a class="pb-1 pb-sm-0" href="{% link legal/privacy.html %}">
             Privacy Policy
           </a>
           <span class="d-none d-sm-block px-3 fw-semibold" aria-disabled="true">|</span>
-          <a class="pb-0" href="{{ site.baseurl }}/legal/terms">
+          <a class="pb-0" href="{% link legal/terms.html %}">
             Terms of Use
           </a>
         </p>

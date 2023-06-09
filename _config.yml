@@ -5,12 +5,14 @@
 # Information for compile
 exclude: ["Gemfile", "CNAME", "LICENSE", "README.md", "AUTHORING.md"]
 
+# Plugins
+plugins:
+  - jekyll-sitemap
+
 # Sass configuration
 sass:
   sass_dir: _scss
 
-# TODO: Convert to Jekyll v4, use custom action, and use collection "sort" instead.
-# SEE: https://github.com/github/pages-gem/issues/651#issuecomment-1197448026
 # Collections
 collections_dir: _collections
 collections:
@@ -27,7 +29,7 @@ collections:
 baseurl: ""
 
 # the base hostname & protocol for your site
-url: "https://cocoacolorlab.salon"
+url: https://cocoacolorlab.salon
 
 ##
 ## HEADER INFORMATION
@@ -58,20 +60,20 @@ email: hello@cocoacolorlab.salon
 ##
 ## Global Social Links
 ##
-facebook: "https://www.facebook.com/CocoaColorLab.salon/"
-instagram: "https://www.instagram.com/CocoaColorLab.salon/"
-tiktok: "https://www.tiktok.com/@CocoaColorLab.salon"
-youtube: "https://www.youtube.com/@CocoaColorLabSalon"
+facebook: https://www.facebook.com/CocoaColorLab.salon/
+instagram: https://www.instagram.com/CocoaColorLab.salon/
+tiktok: https://www.tiktok.com/@CocoaColorLab.salon
+youtube: https://www.youtube.com/@CocoaColorLabSalon
 
 ##
 ## Global Images
 ##
-facebook-image: "/images/icons/facebook.svg"
-instagram-image: "/images/icons/instagram.svg"
-tiktok-image: "/images/icons/tiktok.svg"
-youtube-image: "/images/icons/youtube.svg"
-linkedin-image: "/images/icons/linkedin.svg"
-email-image: "/images/icons/email.svg"
+facebook-image: /images/icons/facebook.svg
+instagram-image: /images/icons/instagram.svg
+tiktok-image: /images/icons/tiktok.svg
+youtube-image: /images/icons/youtube.svg
+linkedin-image: /images/icons/linkedin.svg
+email-image: /images/icons/email.svg
 
 ##
 ## Footer

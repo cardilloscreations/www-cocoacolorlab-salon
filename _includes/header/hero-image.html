@@ -1,6 +1,6 @@
 <picture>
-    <source media="(orientation:portrait) and (max-width: 767.98px)" srcset="{{ site.baseurl }}/images/header-image.port.sm.webp">
-    <source media="(orientation:portrait) and (min-width: 768px)" srcset="{{ site.baseurl }}/images/header-image.port.md.webp">
-    <source media="(orientation:landscape)" srcset="{{ site.baseurl }}/images/header-image.land.webp">
-    <img src="{{ site.baseurl }}/images/header-image.land.webp" alt="{{ site.header-title }}" fetchpriority="high">
+    <source media="(orientation:portrait) and (max-width: 767.98px)" srcset="{% link images/header-image.port.sm.webp %}">
+    <source media="(orientation:portrait) and (min-width: 768px)" srcset="{% link images/header-image.port.md.webp %}">
+    <source media="(orientation:landscape)" srcset="{% link images/header-image.land.webp %}">
+    <img src="{% link images/header-image.land.webp %}" alt="{{ site.header-title }}" fetchpriority="high">
 </picture>

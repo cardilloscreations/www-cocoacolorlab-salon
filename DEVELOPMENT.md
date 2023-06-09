@@ -1,4 +1,4 @@
-# Authoring Content
+# Development & Authoring Content
 
 The instructions below are useful reminders but it's a fairly common workflow for any Jekyll based website.
 
@@ -12,7 +12,7 @@ To use this project, you'll need the following things installed on your machine.
 
 ## Usage
 
-Since this is a Jekyll theme, every command described in the [Jekyll documentation](https://jekyllrb.com/docs/) is available.
+Since this is a Jekyll site, every command described in the [Jekyll documentation](https://jekyllrb.com/docs/) is available.
 
 ### Development
 
@@ -30,6 +30,8 @@ To build the project, run:
 bundle exec jekyll build
 ```
 
-### GitHub
+### GitHub Pages
 
-In practice, the production step is not required because GitHub will compile the project and publish the new version when new commits are merged.
+Because this site is using the latest version of Jekyll, deployment to GitHub Pages must happen by way of a custom Workflow Action.
+
+For more information see: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
