@@ -1,6 +1,7 @@
 # Development & Authoring Content
 
-The instructions below are useful reminders but it's a fairly common workflow for any Jekyll based website.
+The instructions below are useful reminders for developers.
+
 
 ## System Preparation
 
@@ -8,6 +9,14 @@ To use this project, you'll need the following things installed on your machine.
 
 1. [Jekyll](http://jekyllrb.com/docs/) - `$ gem install jekyll bundler`
 2. [Jekyll-Gems](http://jekyllrb.com/docs/) - `$ bundle install`
+3. [node.js](https://nodejs.org/en/download) - `$ brew install node`
+
+### Installing Dependencies
+
+This is not a `node.js` project but it does uses some `node.js` packages and utilities at development time. So you must first install the dependencies.
+
+1. `bundle install`
+2. `npm install`
 
 
 ## Usage

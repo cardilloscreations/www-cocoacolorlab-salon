@@ -6,6 +6,6 @@ _site/
 # avoid problems with github-pages gem
 Gemfile.lock
 
-# ignore node modules that are used for npx commands
+# ignore node modules that are used for dev commands
 /node_modules
-/package*.json
+/package-lock.json

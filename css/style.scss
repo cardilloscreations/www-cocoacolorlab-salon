@@ -3,6 +3,9 @@
 # only Main files contain this front matter, not partials.
 ---
 
+// NOTE: We download the Bootstrap package, import all, then purge unused.
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 // Base
 @import "base/_config",
         "base/_keyframes",

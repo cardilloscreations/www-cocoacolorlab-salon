@@ -3,7 +3,16 @@
 #
 
 # Information for compile
-exclude: ["Gemfile", "CNAME", "LICENSE", "README.md", "AUTHORING.md"]
+exclude:
+  - "Gemfile"
+  - "CNAME"
+  - "LICENSE"
+  - "*.md"
+  - "*.js"
+  - "*.json"
+  - "images/favicon/*.md"
+  - "images/favicon/*.html"
+  - "images/favicon/*.xml"
 
 # Plugins
 plugins:
@@ -12,6 +21,7 @@ plugins:
 # Sass configuration
 sass:
   sass_dir: _scss
+#  sourcemap: never
 
 # Collections
 collections_dir: _collections
