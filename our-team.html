@@ -3,7 +3,7 @@ layout: contained
 title: Our Team
 description: Learn more about our owners and our amazing team of professional stylists, artists, and support staff.
 preloadItems:
-  - href: "/images/team/Lisa.600sq.webp"
+  - href: "/assets/images/team/Lisa.600sq.webp"
     params: as="image" type="image/webp" fetchpriority="high"
 ---
 
@@ -17,5 +17,5 @@ preloadItems:
     </div>
 </section>
 
-{% include sections/team-members.html id="team-owners" title="Meet The Owners" members=site.team_owners %}
-{% include sections/team-members.html id="team-others" title="Our Team Members" members=site.team_others %}
+{% include sections/our-team-members.html id="team-owners" title="Meet The Owners" members=site.data.team.owners %}
+{% include sections/our-team-members.html id="team-others" title="Our Team Members" members=site.data.team.others %}

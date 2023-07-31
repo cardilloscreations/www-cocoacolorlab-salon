@@ -1,0 +1,83 @@
+/**
+ *  Vcard Section Style
+ **/
+
+.vcard-section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  .card {
+    padding: 2.5em;
+    margin: 1.5em;
+    background-color: $white-transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 2px 5px 10px;
+    transition: all .3s ease-in-out;
+
+    .card-img-top {
+      width: 80%;
+      height: auto;
+      margin-bottom: 0.5em;
+      object-fit: cover;
+      object-position: center top;
+      border-color: white;
+      border-width: .35em;
+      border-style: solid;
+      box-shadow: rgba(0, 0, 0, 0.2) 2px 5px 10px;
+      transition: all .3s ease-in-out;
+      
+      @media (min-width: $mobile-break), (hover: hover) {
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.24) 2px 7px 14px;
+          transform: perspective(200px) translate3d(0, -2px, 2px);
+        }
+      }  
+    }
+
+    .card-body {
+      padding: 1em 0em 0em;
+
+      .card-title {
+
+        .member-name {
+          text-align: start;
+          font-weight: bold;
+          font-size: 1.4em;
+        }
+
+        .member-title {
+          text-align: start;
+          font-style: italic;
+          font-size: 1.1em;
+        }
+      }
+
+      img {
+        width: 1.75em;
+        height: 1.75em;
+        margin-left: 0.75em;
+        filter: opacity(0.65)
+      }
+    }
+
+    .card-text {
+      padding-top: 0.5em;
+      color: $light-secondary;
+      border-top: 1px solid $light-secondary;
+      text-align: justify;
+      text-align-last: center;
+    }
+
+    .btn {
+      font-size: 1.25em;
+      font-weight: bold;
+      box-shadow: rgba(0, 0, 0, 0.8) 2px 4px 6px;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      padding: 0.5em;
+    }
+    
+    .btn + .btn {
+      margin-top: 1.0em;
+    }
+  }
+}

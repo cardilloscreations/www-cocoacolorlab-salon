@@ -1,6 +1,6 @@
 <head>
 
-  {%- capture abs_page_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture -%}
+  {%- capture abs_page_url %}{{ site.url }}/{{ site.baseurl }}/{{ page.url }}{% endcapture -%}
   {%- capture page_title -%}
   {%- if page.title -%}
   {{ page.title | strip_html }} - {{ site.title }}
@@ -24,7 +24,7 @@
 
   {%- comment %} Preload any page specific items {% endcomment -%}
   {%- for preloadItem in page.preloadItems -%}
-  <link rel="preload" href="{{ site.baseurl }}{{ preloadItem.href }}" {{ preloadItem.params }}>
+  <link rel="preload" href="{{ site.baseurl }}/{{ preloadItem.href }}" {{ preloadItem.params }}>
   {%- endfor -%}  
 
   {%- comment %} Warm up references with Pre-Connect {% endcomment -%}
@@ -32,10 +32,10 @@
   <link rel="preconnect" href="https://www.googletagmanager.com">
 
   {%- comment %} Preload the stylesheets to maybe get a minor jumpstart {% endcomment -%}
-  <link rel="preload" href="{{ site.baseurl }}/css/style.css" type="text/css" as="style">
+  <link rel="preload" href="{{ site.baseurl }}/{{ site.css_path }}/style.css" type="text/css" as="style">
 
   {%- comment %} Load the stylesheets {% endcomment -%}
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/{{ site.css_path }}/style.css">
 
   {%- comment %} General Page Metadata {% endcomment -%}
   <title>{{ page_title }}</title>
@@ -85,15 +85,15 @@
   {%- endif -%}
 
   {%- comment %} see: https://realfavicongenerator.net/ {% endcomment -%}
-  <link rel="icon" sizes="any" type="image/svg+xml" fetchpriority="low" href="/images/favicon/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=2023.05.08.21">
-  <link rel="icon" type="image/png" sizes="32x32" fetchpriority="low" href="/images/favicon/favicon-32x32.png?v=2023.05.08.21">
-  <link rel="icon" type="image/png" sizes="16x16" fetchpriority="low" href="/images/favicon/favicon-16x16.png?v=2023.05.08.21">
-  <link rel="manifest" fetchpriority="low" href="/images/favicon/site.webmanifest?v=2023.05.08.21">
-  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=2023.05.08.21" color="#5bbad5">
-  <link rel="shortcut icon" fetchpriority="low" href="/images/favicon/favicon.ico?v=2023.05.08.21">
+  <link rel="icon" sizes="any" type="image/svg+xml" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/{{ site.images_path }}/favicon/apple-touch-icon.png?v=2023.07.29.21">
+  <link rel="icon" type="image/png" sizes="32x32" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon-32x32.png?v=2023.07.29.21">
+  <link rel="icon" type="image/png" sizes="16x16" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon-16x16.png?v=2023.07.29.21">
+  <link rel="manifest" fetchpriority="low" href="/{{ site.images_path }}/favicon/site.webmanifest?v=2023.07.29.21">
+  <link rel="mask-icon" href="/{{ site.images_path }}/favicon/safari-pinned-tab.svg?v=2023.07.29.21" color="#5bbad5">
+  <link rel="shortcut icon" fetchpriority="low" href="/{{ site.images_path }}/favicon/favicon.ico?v=2023.07.29.21">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=2023.05.08.21">
+  <meta name="msapplication-config" content="/{{ site.images_path }}/favicon/browserconfig.xml?v=2023.07.29.21">
   <meta name="theme-color" content="#ffffff">
 
 </head>

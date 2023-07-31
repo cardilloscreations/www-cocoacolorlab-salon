@@ -1,7 +1,7 @@
 <nav id="site-navbar" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top flex-column">
   <div class="w-100 d-flex">
     <a class="navbar-brand mx-auto" href="{{ site.baseurl }}/#" aria-label="Link to Main Home Page">
-      <img src="{% link images/logo.svg %}" height="52" alt="{{ site.title }} Logo">
+      <img src="{% link {{ site.images_path }}/logo.svg %}" height="52" alt="{{ site.title }} Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

@@ -1,0 +1,17 @@
+Alexa Cardillo:
+  title: Hair Stylist
+  image: team/Alexa.600sq.webp
+  instagram: https://www.instagram.com/hairbyalexacardillo/
+  vcard: Alexa-Cardillo.CCL.salon.vcf
+  description: >
+    Alexa has great attention to detail, stays current with new techniques and trends, and excels with modern styling and updos.
+    She has also been focusing on artistic nails and eyebrow shaping.
+    Since she was formally trained by Lisa, you can be sure that her standards of excellence are the same that Lisa demands for herself.
+
+Your Face Here:
+  title: Inquire About Opportunities
+  image: team/MysteryGirl.600sq.webp
+  email: prosper@cocoacolorlab.salon
+  description: >
+    See our <a href="{% link careers.html %}">careers page</a> for more details.
+    If you want to learn more about us, then we want to learn more about you!!

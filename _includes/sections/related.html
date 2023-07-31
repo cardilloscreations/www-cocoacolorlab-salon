@@ -9,7 +9,7 @@
       {%- capture related_site_title_text %}{{ related_site.title | strip_html | strip }}{% endcapture -%}
       <a class="text-decoration-none col-10 col-md-5 p-0 m-2" href="{{ related_site.related_url }}" aria-label="Link to {{ related_site_title_text }}">
         <div class="card text-center p-0 m-0">
-          <img class="card-img-top" loading="lazy" src="{% link {{ related_site.image }} %}" width="400" height="400" alt="{{ related_site_title_text }}">
+          <img class="card-img-top" loading="lazy" src="{% link {{ site.images_path }}/{{ related_site.image }} %}" width="400" height="400" alt="{{ related_site_title_text }}">
           <div class="card-body">
             <span class="card-title h4">{{ related_site.title }}</span>
             <p class="card-text">{{ related_site.content }}</p>

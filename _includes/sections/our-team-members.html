@@ -1,0 +1,57 @@
+<section class="site-section team-section" id="{{- include.id -}}">
+  <header class="section-header">
+    <h2>{{- include.title -}}</h2>
+  </header>
+  <div class="section-content">
+    <div class="row d-flex justify-content-center">
+      {%- for team_entry in include.members -%}
+      {%- assign member_name = team_entry[0] -%}
+      {%- assign member_data = team_entry[1] -%}
+      <div class="card text-center col-11 col-md-5">
+        {%- assign member_vcard = site.vcards | where: "team_entry.name", member_name | first -%}
+        {%- if member_vcard.url -%}
+        <a href="{{ member_vcard.url }}" aria-label="Link to vcard for {{ member_name }}">
+          <img class="card-img-top" src="{% link {{ site.images_path }}/{{ member_data.image }} %}" width="600" height="600" alt="{{ member_name }}">
+        </a>
+        {%- else -%}
+        <img class="card-img-top" src="{% link {{ site.images_path }}/{{ member_data.image }} %}" width="600" height="600" alt="{{ member_name }}">
+        {%- endif -%}
+        <div class="card-body">
+          <div class="card-title">
+            <div class="d-flex flex-row align-self-center">
+              <div class="flex-grow-1">
+                <p class="member-name">
+                  {{- member_name -}}
+                </p>
+              </div>
+              <div class="d-flex flex-row flex-grow-0 justify-content-end align-self-center">
+                {%- if member_data.email %}
+                <a href="mailto:{{ member_data.email }}" aria-label="{{ member_name }} - Email" target="_blank">
+                  <img src="{% link {{ site.images_path }}/{{ site.email-image }} %}" alt="{{ member_name }} - Email" height="100" width="100">
+                </a>
+                {% endif -%}
+                {%- if member_data.instagram %}
+                <a href="{{ member_data.instagram }}" aria-label="{{ member_name }} - Instagram" target="_blank">
+                  <img src="{% link {{ site.images_path }}/{{ site.instagram-image }} %}" alt="{{ member_name }} - Instagram" height="100" width="100">
+                </a>
+                {% endif -%}
+                {%- if member_data.linkedin %}
+                <a href="{{ member_data.linkedin }}" aria-label="{{ member_name }} - LinkedIn" target="_blank">
+                  <img src="{% link {{ site.images_path }}/{{ site.linkedin-image }} %}" alt="{{ member_name }} - LinkedIn" height="100" width="100">
+                </a>
+                {% endif -%}
+              </div>
+            </div>
+            <div class="d-flex flex-row align-self-center">
+              <p class="member-title">
+                {{- member_data.title -}}
+              </p>
+            </div>
+          </div>
+          <p class="card-text">{{ member_data.description }}</p>
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

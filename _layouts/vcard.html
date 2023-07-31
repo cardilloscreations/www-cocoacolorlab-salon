@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+{%- capture preloadLines -%}
+<link rel="preload" href="{% link {{ site.images_path }}/header-image.land.webp %}" as="image" type="image/webp" fetchpriority="high">
+{%- endcapture -%}
+{%- include head.html preloadLines=preloadLines -%}
+
+<body style="background-image: url({% link {{ site.images_path }}/header-image.land.webp %}); background-size: cover;">
+  <nav id="site-navbar" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top flex-column">
+    <div class="w-100 d-flex">
+      <a class="navbar-brand mx-auto" href="{{ site.baseurl }}/#" aria-label="Link to Main Home Page">
+        <img src="{% link {{ site.images_path }}/logo.svg %}" height="52" alt="{{ site.title }} Logo">
+      </a>
+    </div>
+  </nav>
+
+  {%- assign member_name = page.team_entry.name -%}
+  {%- assign team_entry = site.data.team[page.team_entry.type][member_name] -%}
+  {%- assign member_data = team_entry -%}
+
+  <div class="vcard-section text-center" id="vcard">
+    <div class="section-content">
+      <div class="row d-flex justify-content-center">
+        <div class="card text-center col-9">
+          <img class="card-img-top rounded-circle mx-auto" src="{% link {{ site.images_path }}/{{ member_data.image }} %}" width="600" height="600" alt="{{ member_name }}">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="d-flex flex-row align-self-center">
+                <div class="flex-grow-1">
+                  <p class="member-name">
+                    {{- member_name -}}
+                  </p>
+                </div>
+                <div class="d-flex flex-row flex-grow-0 justify-content-end align-self-center">
+                  {%- if member_data.email %}
+                  <a href="mailto:{{ member_data.email }}" aria-label="{{ member_name }} - Email" target="_blank">
+                    <img src="{% link {{ site.images_path }}/{{ site.email-image }} %}" alt="{{ member_name }} - Email" height="100" width="100">
+                  </a>
+                  {% endif -%}
+                  {%- if member_data.instagram %}
+                  <a href="{{ member_data.instagram }}" aria-label="{{ member_name }} - Instagram" target="_blank">
+                    <img src="{% link {{ site.images_path }}/{{ site.instagram-image }} %}" alt="{{ member_name }} - Instagram" height="100" width="100">
+                  </a>
+                  {% endif -%}
+                  {%- if member_data.linkedin %}
+                  <a href="{{ member_data.linkedin }}" aria-label="{{ member_name }} - LinkedIn" target="_blank">
+                    <img src="{% link {{ site.images_path }}/{{ site.linkedin-image }} %}" alt="{{ member_name }} - LinkedIn" height="100" width="100">
+                  </a>
+                  {% endif -%}
+                </div>
+              </div>
+              <div class="d-flex flex-row align-self-center">
+                <p class="member-title">
+                  {{- member_data.title -}}
+                </p>
+              </div>
+            </div>
+            <p class="card-text">{{ member_data.description }}</p>
+          </div>
+          <hr>
+          {%- if member_data.booking -%}
+          <a class="btn btn-secondary rounded-pill" href="{{ member_data.booking }}" role="button">Book Appointment</a>
+          {%- endif -%}
+          {%- if member_data.vcard -%}
+          <a class="btn btn-secondary rounded-pill" href="{% link /{{ site.vcards_path }}/{{ member_data.vcard }} %}" role="button">Import Contact</a>
+          {%- endif -%}
+          <a class="btn btn-secondary rounded-pill" href="{{ site.url }}/{{ site.baseurl }}" role="button">Salon Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- include footer.html -%}
+
+  {%- include scripts/ext-scripts.html -%}
+
+</body>
+
+</html>

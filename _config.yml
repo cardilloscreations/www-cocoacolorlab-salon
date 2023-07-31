@@ -10,9 +10,9 @@ exclude:
   - "*.md"
   - "*.js"
   - "*.json"
-  - "images/favicon/*.md"
-  - "images/favicon/*.html"
-  - "images/favicon/*.xml"
+  - "assets/images/favicon/*.md"
+  - "assets/images/favicon/*.html"
+  - "assets/images/favicon/*.xml"
 
 # Plugins
 plugins:
@@ -34,12 +34,20 @@ collections:
   team_others:
     sort_by: order
     member_type: other
+  vcards:
+    sort_by: order
+    output: true
 
 # Information for deploy
 baseurl: ""
 
 # the base hostname & protocol for your site
 url: https://cocoacolorlab.salon
+
+assets_path:  assets
+css_path:     assets/css
+images_path:  assets/images
+vcards_path:  assets/vcards
 
 ##
 ## HEADER INFORMATION
@@ -78,12 +86,12 @@ youtube: https://www.youtube.com/@CocoaColorLabSalon
 ##
 ## Global Images
 ##
-facebook-image: /images/icons/facebook.svg
-instagram-image: /images/icons/instagram.svg
-tiktok-image: /images/icons/tiktok.svg
-youtube-image: /images/icons/youtube.svg
-linkedin-image: /images/icons/linkedin.svg
-email-image: /images/icons/email.svg
+facebook-image: icons/facebook.svg
+instagram-image: icons/instagram.svg
+tiktok-image: icons/tiktok.svg
+youtube-image: icons/youtube.svg
+linkedin-image: icons/linkedin.svg
+email-image: icons/email.svg
 
 ##
 ## Footer
